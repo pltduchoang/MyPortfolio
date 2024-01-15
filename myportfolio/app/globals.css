@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Apply the font to your body or specific elements */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+
+.text-day {
+  color: #214177;
+}
+
+.text-day-light {
+  color: #3667A6;
+}
+
+.text-night {
+  color: #BDD8F1;
+}
+
+.text-night-light {
+  color: #82A6CB;
+}
+
+
+
+.item-night {
+  background-color: #5584AC;
+}
+
+.item-day {
+  background-color: #25316D;
+}
+
+.hr-night {
+  height: 0px;
+  border: 0 0 1px 0;
+  border-color: #5584AC;
+}
+
+.hr-day {
+  height: 0px;
+  border: 0 0 1px 0;
+  border-color: #25316D;
+}
+
+.social-icon svg {
+  fill: #3667A6; /* default color */
+  transition: fill 0.5s; /* smooth transition for the fill color */
+}
+
+.social-icon:hover svg {
+  fill: #214177; /* color on hover */
+}
+
+.social-icon-night svg {
+  fill: #82A6CB; /* default color */
+  transition: fill 0.5s; /* smooth transition for the fill color */
+}
+
+.social-icon-night:hover svg {
+  fill: #BDD8F1; /* color on hover */
+}
+
+
