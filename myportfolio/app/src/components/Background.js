@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import { useTheme } from '../utils/ThemeContext';
 
-export default function Background({doneTransition}) {
+export default function Background({beginTransition,doneTransition}) {
     // State hooks for each layer
     const [layer1, setLayer1] = useState(true);
     const [layer2, setLayer2] = useState(true);
@@ -41,6 +41,7 @@ useEffect(() => {
         const startTransition = () => {
             let index = 0;
             setIsFilterVisible(false)
+            beginTransition(true); // Prepare layers for the next mode
             const interval = setInterval(() => {
                 if (index < setLayerStates.length - 1) { // Change here
                     setLayerStates[index](false); // Set layer opacity to 0

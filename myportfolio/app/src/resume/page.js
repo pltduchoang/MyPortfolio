@@ -16,9 +16,6 @@ export default function Page() {
     const [hideContent, setHideContent] = useState(false);
 
 
-    useEffect(() => {
-        setHideContent(true);
-    }, [isNightMode]);
 
     const handleDoneTransition = (e) => {
         if (e) {
@@ -26,9 +23,15 @@ export default function Page() {
         }
     };
 
+    const handleBeginTransition = (e) => {
+        if (e) {
+            setHideContent(true);
+        }
+    };
+
     return (
         <main>
-            <Background doneTransition={handleDoneTransition}/>
+            <Background doneTransition={handleDoneTransition} beginTransition={handleBeginTransition}/>
             <button onClick={() => setIsNightMode(!isNightMode)}>Switch to Night Mode</button>
             <div className={` transition-all duration-500 ease-in-out ${hideContent? 'opacity-0' : 'opacity-100'}`}>
                 <div>
