@@ -91,4 +91,40 @@ body {
   fill: #BDD8F1; /* color on hover */
 }
 
+.menu-bg-night {
+  background-color: #214177; /* Your desired background color for the menu */
+  z-index: 1;
+}
 
+.menu-bg-day {
+  background-color: #82A6CB; /* Your desired background color for the menu */
+  z-index: 1;
+}
+
+.menu-text-night {
+  color: #82A6CB;
+  z-index: 1;
+}
+
+.menu-text-day {
+  color: #214177;
+  z-index: 1;
+}
+
+
+.highlighted {
+  color: #4285f4; /* Highlight color for active section button */
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

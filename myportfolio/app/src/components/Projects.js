@@ -5,7 +5,7 @@ export default function Projects () {
     const { isNightMode } = useTheme(); // Corrected line
     return(
     <div className={`font-normal text-base my-2 ${isNightMode ? 'text-night-light' : 'text-day-light'}`}>
-        <h2 className={`font-semibold text-lg my-6 ${isNightMode ? 'text-night' : 'text-day'}`}>Projects</h2>
+        <h2 className={`font-semibold text-xl my-6 ${isNightMode ? 'text-night' : 'text-day'}`}>MY PROJECTS</h2>
 
         <div className="project-section my-4">
             <h3 className={`font-semibold text-base mt-3 ${isNightMode ? 'text-night' : 'text-day'}`}>Project Title</h3>

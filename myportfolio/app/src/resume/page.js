@@ -10,9 +10,10 @@ import { useTheme } from '../utils/ThemeContext';
 import Achievements from '../components/Achievements';
 import Projects from '../components/Projects';
 import Skills from '../components/Skills';
+import Menu from '../components/Menu';
 
 export default function Page() {
-    const { isNightMode, setIsNightMode } = useTheme(); // Corrected line
+    const { isNightMode, setIsNightMode, visibleSections } = useTheme(); // Corrected line
     const [hideContent, setHideContent] = useState(false);
 
 
@@ -32,29 +33,30 @@ export default function Page() {
     return (
         <main>
             <Background doneTransition={handleDoneTransition} beginTransition={handleBeginTransition}/>
-            <button onClick={() => setIsNightMode(!isNightMode)}>Switch to Night Mode</button>
-            <div className={` transition-all duration-500 ease-in-out ${hideContent? 'opacity-0' : 'opacity-100'}`}>
-                <div>
-                    <div className='w-80 p-6'>
+            <Menu />
+            <div className={` transition-all duration-500 ease-in-out pt-14 ${hideContent? 'opacity-0' : 'opacity-100'}`}>
+                <div id='bio' className={`section ${visibleSections['bio'] ? 'visible' : ''}`}>
+                    <div className='w-80 pt-8 px-6'>
                         <Bio/>
                     </div>
-                    <div className='w-80 p-6'>
+                    <div className='w-80 pt-8 px-6'>
                         <SocialIcons />
                     </div>
+                    <div className={`w-full pt-8 px-6`} >
+                        <About />
+                    </div>
+                    
                 </div>
-                <div className='w-full p-6'>
-                    <About />
-                </div>
-                <div className='w-full p-6'>
+                <div className={`section w-full pt-8 px-6 ${visibleSections['education'] ? 'visible' : ''}`} id='education' >
                     <Education />
                 </div>
-                <div className='w-full p-6'>
+                <div className={`section w-full pt-8 px-6 ${visibleSections['achievements'] ? 'visible' : ''}`} id='achievements'>
                     <Achievements />
                 </div>
-                <div className='w-full p-6'>
+                <div className={`section w-full pt-8 px-6 ${visibleSections['skills'] ? 'visible' : ''}`} id='skills'>
                     <Skills />
                 </div>
-                <div className='w-full p-6'>
+                <div className={`section w-full pt-8 px-6 ${visibleSections['projects'] ? 'visible' : ''}`} id='projects'>
                     <Projects />
                 </div>
             </div>

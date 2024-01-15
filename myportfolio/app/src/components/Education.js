@@ -4,7 +4,7 @@ export default function Education () {
     const { isNightMode } = useTheme(); // Corrected line
     return (
 <div className={`font-normal text-base my-2 ${isNightMode ? 'text-night-light' : 'text-day-light'}`}>
-    <h2 className={`font-semibold text-lg my-6 ${isNightMode ? 'text-night' : 'text-day'}`}>Education & Certifications</h2>
+    <h2 className={`font-semibold text-xl my-6 ${isNightMode ? 'text-night' : 'text-day'}`}>EDUCATION</h2>
 
     <div className="education-section">
         <h3 className={`font-semibold text-base mt-3 mb-1 ${isNightMode ? 'text-night' : 'text-day'}`}>Software Development Diploma</h3>

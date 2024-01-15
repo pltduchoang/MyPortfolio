@@ -4,7 +4,7 @@ export default function About () {
     const { isNightMode } = useTheme(); // Corrected line
     return (
         <div>
-            <h2 className={`font-semibold text-base my-2 ${isNightMode ? 'text-night' : 'text-day'}`}>MY STORY</h2>
+            <h2 className={`font-semibold text-xl my-2 ${isNightMode ? 'text-night' : 'text-day'}`}>MY STORY</h2>
             <p className={` font-semibold text-base my-4 ${isNightMode ? 'text-night-light' : 'text-day-light'}`}>
                 2010, my first take-off, I would never forget the feeling of accelerating down the runway, seeing the horizon rushing towards me, and the sky swallowed me whole. It began my 10 years of safe and efficient flying record, my small pride. 2020, with my last landing at a small airport in India, a new chapter began, I would become a software developer, something my younger self always wanted to do. 
             </p>
