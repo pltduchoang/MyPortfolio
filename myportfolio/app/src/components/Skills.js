@@ -25,7 +25,7 @@ export default function Skills() {
             <h2 className={`text-2xl font-bold mb-4 ${isNightMode ? 'text-night' : 'text-day'}`}>Skills</h2>
             <div className="w-full flex flex-wrap justify-center">
                 {skills.map(skill => (
-                    <div key={skill.name} className={` w-32 m-3 flex flex-col justify-center items-center hover:cursor-pointer ${isNightMode ? 'skill-hover-night' : 'skill-hover'}`}>
+                    <div key={skill.name} className={` w-1/3 m-3 flex flex-col justify-center items-center hover:cursor-pointer ${isNightMode ? 'skill-hover-night' : 'skill-hover'}`}>
                         <div className={`skill-icon w-1/2`}>
                             <img 
                                 src={skill.icon} 
