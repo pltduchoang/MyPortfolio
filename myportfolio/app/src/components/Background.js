@@ -91,7 +91,7 @@ useEffect(() => {
     return (
         <div className=''>
             <div 
-                className={`transition fixed top-0 left-0 min-h-screen min-w-full duration-1000 ease-in ${isNightMode ? ' bg-zinc-800' : ' bg-slate-100'} ${isFilterVisible ? ' opacity-70' : 'opacity-0'}`}
+                className={`transition fixed top-0 left-0 min-h-screen min-w-full duration-1000 ease-in ${isNightMode ? 'bg-black' : ' bg-white'} ${isFilterVisible ? ' opacity-90' : 'opacity-0'}`}
                 style={{zIndex:-1}}
             />
             <img

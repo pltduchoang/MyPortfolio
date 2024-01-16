@@ -3,11 +3,39 @@ import { useTheme } from '../utils/ThemeContext';
 
 export default function Skills() {
     const { isNightMode } = useTheme(); // Corrected line
+
+    const skills = [
+        { name: 'React', icon: '/png/react.png' },
+        { name: 'JavaScript', icon: '/png/javascript.png' },
+        { name: 'TypeScript', icon: '/png/typescript.png' },
+        { name: 'Next.js', icon: '/png/nextjs.png' },
+        { name: 'Bootstrap', icon: '/png/bootstrap.png' },
+        { name: 'Tailwind', icon: '/png/tailwindcss.png' },
+        { name: 'C Sharp', icon: '/png/csharp.png' },
+        { name: 'DotNet', icon: '/png/dotnet.png' },
+        { name: 'ASP.NET', icon: '/png/aspnet.png' },
+        { name: 'Java', icon: '/png/java.png' },
+        { name: 'Python', icon: '/png/python.png' },
+        { name: 'SQL', icon: '/png/sql.png' },
+        { name: 'Firebase', icon: '/png/firebase.png' },
+    ];
+
     return (
         <div className='w-full'>
-            <h2 className={`text-xl font-bold mb-4 ${isNightMode ? 'text-night' : 'text-day'}`}>SKILLS</h2>
+            <h2 className={`text-2xl font-bold mb-4 ${isNightMode ? 'text-night' : 'text-day'}`}>Skills</h2>
             <div className="w-full flex flex-wrap justify-center">
-                
+                {skills.map(skill => (
+                    <div key={skill.name} className={` w-32 m-3 flex flex-col justify-center items-center hover:cursor-pointer ${isNightMode ? 'skill-hover-night' : 'skill-hover'}`}>
+                        <div className={`skill-icon w-1/2`}>
+                            <img 
+                                src={skill.icon} 
+                                alt={skill.name} 
+                                className={`w-full h-auto ${isNightMode ? 'filter-night' : 'filter-day'}`}
+                            />
+                        </div>
+                        <p className={`text-base text-center font-bold skill-text w-1/2 mt-2 ${isNightMode ? 'text-night-light' : 'text-day-light'}`}>{skill.name}</p>
+                    </div>
+                ))}
             </div>
         </div>
     );

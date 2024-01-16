@@ -4,10 +4,10 @@
 
 /* globals.css */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 /* Apply the font to your body or specific elements */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 :root {
@@ -64,7 +64,7 @@ body {
 .hr-night {
   height: 0px;
   border: 0 0 1px 0;
-  border-color: #5584AC;
+  border-color: #BDD8F1;
 }
 
 .hr-day {
@@ -122,9 +122,33 @@ body {
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
-
-
 .visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.filter-day {
+  filter: brightness(0.5) saturate(0.6) sepia(0.4) grayscale(0.3) hue-rotate(360deg); /* Example filter, adjust as needed */
+}
+
+.filter-night {
+  filter: brightness(0.3) saturate(0.3) sepia(0.8) grayscale(0.7) hue-rotate(0deg); /* Example filter, adjust as needed */
+}
+
+
+.skill-icon:hover img {
+  filter: none;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.1);
+}
+
+.tag-day {
+  background-color: #82a6cb;
+  color: #214177;
+}
+
+
+.tag-night {
+  background-color: #82A6CB;
+  color: #25316D;
 }
