@@ -49,7 +49,7 @@ export default function Page() {
                         <SocialIcons />
                     </div>
                 </div>
-                <div id='bio' className={`section mb-20 ${visibleSections['bio'] ? 'visible' : ''} lg:w-6/12 lg:h-screen lg:flex-col lg:hidden`}>
+                <div id='bio' className={`mb-20 ${visibleSections['bio'] ? 'visible' : ''} lg:w-6/12 lg:h-screen lg:flex-col lg:hidden`}>
                     <div className=' w-96 pt-8 px-6 md:w-1/2 lg:hidden'>
                         <Bio/>
                     </div>
