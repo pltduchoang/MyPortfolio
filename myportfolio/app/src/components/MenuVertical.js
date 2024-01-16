@@ -10,7 +10,15 @@ export default function MenuVertical() {
     const { isNightMode, setIsNightMode, setSectionVisibility } = useTheme();
 
     const scrollToSection = (sectionId) => {
-        
+        if (sectionId === 'bio') {
+            window.scrollTo(
+                {
+                    top: 0,
+                    behavior: 'smooth'
+                }
+                );
+            return;
+        }
         document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
     };
 
