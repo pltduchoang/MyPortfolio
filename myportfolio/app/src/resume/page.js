@@ -15,8 +15,13 @@ import MenuVertical from '../components/MenuVertical';
 
 export default function Page() {
     const { isNightMode, setIsNightMode, visibleSections } = useTheme(); // Corrected line
-    const [hideContent, setHideContent] = useState(false);
+    const [hideContent, setHideContent] = useState(true);
 
+    useEffect(() => {
+        setTimeout(() => {
+            setHideContent(false);
+        }, 1000);
+    }, []);
 
 
     const handleDoneTransition = (e) => {
@@ -31,8 +36,15 @@ export default function Page() {
         }
     };
 
+    const location = ['Shirakawa-go, Japan']
+
     return (
         <main>
+            { hideContent &&
+                <div className='fixed top-0 left-0 w-full h-full flex justify-center items-center bg-transparent'>
+                    <h1>{location[0]}</h1>
+                </div>
+            }
             <Background doneTransition={handleDoneTransition} beginTransition={handleBeginTransition}/>
             <div className=''>
                 <Menu />
