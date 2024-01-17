@@ -16,7 +16,7 @@ export default function Background({beginTransition,doneTransition}) {
 
     const [currentBackground, setCurrentBackground] = useState(5);
     const [isCurrentBackgroundVisible, setIsCurrentBackgroundVisible] = useState(true);
-    const [isFilterVisible, setIsFilterVisible] = useState(true);
+    const [isFilterVisible, setIsFilterVisible] = useState(false);
 
     const {isNightMode} = useTheme();
 
@@ -88,10 +88,18 @@ useEffect(() => {
     const layerStates = [layer1, layer2, layer3, layer4, layer5, layer6];
     const setLayerStates = [setLayer1, setLayer2, setLayer3, setLayer4, setLayer5, setLayer6];
 
+    useEffect(() => {
+        setIsFilterVisible(false)
+        setTimeout(() => {
+            setIsFilterVisible(true)
+        }, 3000);
+    }
+    , [])
+
     return (
         <div className=''>
             <div 
-                className={`transition fixed top-0 left-0 min-h-screen min-w-full duration-1000 ease-in ${isNightMode ? 'bg-black' : ' bg-white'} ${isFilterVisible ? ' opacity-80' : 'opacity-0'}`}
+                className={`transition fixed top-0 left-0 min-h-screen min-w-full duration-700 ease-in ${isNightMode ? 'bg-black' : ' bg-white'} ${isFilterVisible ? ' opacity-80' : 'opacity-0'}`}
                 style={{zIndex:-1}}
             />
             <img

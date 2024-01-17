@@ -16,12 +16,27 @@ import MenuVertical from '../components/MenuVertical';
 export default function Page() {
     const { isNightMode, setIsNightMode, visibleSections } = useTheme(); // Corrected line
     const [hideContent, setHideContent] = useState(true);
-
+    const [flyMessage, setFlyMessage] = useState(false);
     useEffect(() => {
         setTimeout(() => {
             setHideContent(false);
-        }, 1000);
+        }, 3000);
+        setTimeout(() => {
+            setFlyMessage(true);
+        }, 500);
+        setTimeout(() => {
+            setFlyMessage(false);
+        }, 3000);
     }, []);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setFlyMessage(true);
+        }, 600);
+        setTimeout(() => {
+            setFlyMessage(false);
+        }, 4500);
+    }, [isNightMode]);
 
 
     const handleDoneTransition = (e) => {
@@ -40,11 +55,12 @@ export default function Page() {
 
     return (
         <main>
-            { hideContent &&
-                <div className='fixed top-0 left-0 w-full h-full flex justify-center items-center bg-transparent'>
-                    <h1>{location[0]}</h1>
-                </div>
-            }
+
+            <div className='fixed top-0 left-0 w-full h-full flex justify-center items-center bg-transparent'
+            style={{zIndex:-1}}>
+                <h1 className={`text-5xl font-serif text-white transition-all duration-500 ease-in-out opacity-0 ${flyMessage ? 'opacity-100 translate-x-1 -translate-y-1' : ''}`}>{location[0]}</h1>
+            </div>
+
             <Background doneTransition={handleDoneTransition} beginTransition={handleBeginTransition}/>
             <div className=''>
                 <Menu />
