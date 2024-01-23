@@ -7,7 +7,7 @@ export default function Menu() {
     const [activeSection, setActiveSection] = useState('');
     const [isTop, setIsTop] = useState(true);
     const menuRef = useRef(null);
-    const { isNightMode, setIsNightMode, setSectionVisibility } = useTheme();
+    const { isNightMode, setIsNightMode, setSectionVisibility, isFilterVisible, isDestinationMenuVisible, setIsDestinationMenuVisible} = useTheme();
     const [disableButton, setDisableButton] = useState(false);
 
     const scrollToSection = (sectionId) => {
@@ -22,6 +22,7 @@ export default function Menu() {
         }
         document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
     };
+    
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -53,27 +54,51 @@ export default function Menu() {
 
     }, []);
 
+
     const disableNightMode = () => {
         setDisableButton(true);
         setIsNightMode(!isNightMode);
+        if (isDestinationMenuVisible) {
+            setIsDestinationMenuVisible(false);
+        }
         setTimeout(() => {
             setDisableButton(false);
-        }, 4500);
+        }, 4000);
+    }
+
+    const handleDestination = () => {
+        setIsDestinationMenuVisible(!isDestinationMenuVisible);
     }
 
     return (
         <div>
-            <div ref={menuRef} className={`transition-all duration-500 ease-in-out fixed -top-10 left-0 w-full flex justify-between px-6 h-24 ${isNightMode? 'menu-bg-night':'menu-bg-day' }  ${isTop ? 'translate-y-7' : ''} `}>
+
+            <div ref={menuRef} className={`transition-all duration-700 ease-in-out fixed left-0 w-full flex justify-between px-6 h-16 ${isNightMode? 'menu-bg-night':'menu-bg-day' }  ${isTop ? '-translate-y-16' : ''} lg:opacity-0 `}>
             
             </div>
-            <div className={`flex flex-row w-full justify-between p-6 fixed -top-3 transition-all duration-700 ease-in-out ${isNightMode? 'menu-text-night' : 'menu-text-day'} ${isTop ? 'translate-y-3' : ''} lg:px-24`}>
-                    <button >Home</button>
+            <div className={`flex flex-row w-full justify-between p-6 fixed -top-3 transition-all duration-700 ease-in-out ${isNightMode? 'menu-text-night' : 'menu-text-day'} ${isTop ? '' : ''} ${isFilterVisible? '' :'-translate-y-24'} lg:pl-24 lg:pr-16`}>
+                    {isNightMode? 
+                    (<button onClick={handleDestination}
+                    style={{zIndex:2}}>
+                        <div className={`relative w-9 h-9 rounded-full flex flex-row justify-center items-center overflow-hidden hover:cursor-pointer ${isNightMode? 'item-night' : 'item-day'}`}>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.00 24.00" fill="#214177"  width='28' height='28' style={{paddingTop:1}} stroke-linecap="round" stroke-linejoin="round"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path> </g></svg>
+                                
+                        </div>
+                    </button>
+                    )
+                    :
+                    (<button onClick={handleDestination}
+                    style={{zIndex:2}}>
+                        <div className={` w-9 h-9 rounded-full flex flex-row justify-center items-center relative overflow-hidden hover:cursor-pointer ${isNightMode? 'item-night' : 'item-day'}`}>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.00 24.00" fill="#82A6CB"  width='28' height='28' style={{paddingTop:1}} stroke-linecap="round" stroke-linejoin="round"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path> </g></svg>
+                        </div>
+                    </button>)}
                     <div className='flex items-center transition duration-300 ease-in-out lg:-translate-y-20'>
                         {sections.map(section => (
                             <button
                                 key={section}
                                 onClick={() => scrollToSection(section)}
-                                className={`px-1 ${activeSection === section ? '' : ''}`}
+                                className={`px-1 transition-all duration-700 ease-in-out ${activeSection === section ? '' : ''} ${isTop? '-translate-y-24' : ''}`}
                                     >
                                 {section.charAt(0).toUpperCase() + section.slice(1)}
                             </button>

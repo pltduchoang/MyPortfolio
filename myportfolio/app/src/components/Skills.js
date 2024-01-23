@@ -22,15 +22,15 @@ export default function Skills() {
 
     return (
         <div className='w-full'>
-            <h2 className={`text-2xl font-bold mb-4 ${isNightMode ? 'text-night' : 'text-day'}`}>Skills</h2>
-            <div className="w-full flex flex-wrap justify-center">
+            <h2 className={`text-2xl font-bold  ${isNightMode ? 'text-night' : 'text-day'}`}>SKILLS</h2>
+            <div className="w-full flex flex-wrap justify-center py-6">
                 {skills.map(skill => (
-                    <div key={skill.name} className={` w-1/3 m-3 flex flex-col justify-center items-center hover:cursor-pointer ${isNightMode ? 'skill-hover-night' : 'skill-hover'}`}>
-                        <div className={`skill-icon w-1/2`}>
+                    <div key={skill.name} className={`skill-item max-w-36 m-3 flex flex-col justify-center items-center hover:cursor-pointer ${isNightMode ? 'skill-hover-night' : 'skill-hover'}`}>
+                        <div className={`skill-icon`}>
                             <img 
                                 src={skill.icon} 
                                 alt={skill.name} 
-                                className={`w-full h-auto ${isNightMode ? 'filter-night' : 'filter-day'}`}
+                                className={`w-10/12 h-auto ${isNightMode ? 'filter-night' : 'filter-day'}`}
                             />
                         </div>
                         <p className={`text-base text-center font-bold skill-text w-1/2 mt-2 ${isNightMode ? 'text-night-light' : 'text-day-light'}`}>{skill.name}</p>

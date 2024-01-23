@@ -10,6 +10,10 @@ export function useTheme() {
 export function ThemeProvider({ children }) {
   const [isNightMode, setIsNightMode] = useState(false);
   const [visibleSections, setVisibleSections] = useState({});
+  const [isFilterVisible, setIsFilterVisible] = useState(false);
+  const [isDestinationMenuVisible, setIsDestinationMenuVisible] = useState(false);
+  const [currentDestination, setCurrentDestination] = useState('shirakawa-go');
+  const [destinationName, setDestinationName] = useState('Shirakawa-go, Japan');
 
   const setSectionVisibility = (section, isVisible) => {
     setVisibleSections(prev => {
@@ -25,7 +29,15 @@ export function ThemeProvider({ children }) {
     isNightMode,
     setIsNightMode,
     visibleSections,
-    setSectionVisibility
+    setSectionVisibility,
+    isFilterVisible,
+    setIsFilterVisible,
+    isDestinationMenuVisible,
+    setIsDestinationMenuVisible,
+    currentDestination,
+    setCurrentDestination,
+    destinationName,
+    setDestinationName
   };
 
   // Provide the value and setter to the context

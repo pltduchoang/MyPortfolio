@@ -118,7 +118,7 @@ body {
 
 .section {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateX(40px);
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
@@ -151,4 +151,49 @@ body {
 .tag-night {
   background-color: #82A6CB;
   color: #25316D;
+}
+
+
+.projectButton-day {
+  background-color: transparent;
+  color: #3667A6;
+  border-width: 3px;
+  border-color: #3667A6;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+.projectButton-night {
+  background-color: transparent;
+  color: #82A6CB;
+  border-width: 3px;
+  border-color: #82A6CB;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+.skill-item {
+  width: 27%;
+}
+
+.marginTopForSmallScreen {
+  margin-top: windowHeight; /* Replace with the actual value or a CSS variable */
+}
+
+@media screen and (min-width: 1024px) { /* Adjust the breakpoint as needed */
+  .marginTopForSmallScreen {
+    margin-top: 0;
+  }
+}
+
+.destMenuShow {
+  scale: 10000%;
+}
+
+.destMenuHidden {
+  scale: 0%;
+}
+
+.hover-parent:hover svg {
+  transform: translateX(145px);
 }
