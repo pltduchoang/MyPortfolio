@@ -11,7 +11,7 @@ export default function About () {
             <p className={` font-medium text-base py-4 ${isNightMode ? 'text-night-light' : 'text-day-light'}`}>
                 2023, I showed my family and friends the first expenses tracking app feeling as excited as my first flight. It wasn't a perfect app by any means, but it worked splendidly tracking our business expense.
             </p>
-            <p className={` font-medium text-base py-4 ${isNightMode ? 'text-night-light' : 'text-day-light'}`}>
+            <p className={` font-medium text-base pt-4 ${isNightMode ? 'text-night-light' : 'text-day-light'}`}>
                 As a new grad Software Developer, I am eager to find new destination in the IT industry, and I take joy in building web-app, mobile-app and software. Away from keyboard, I enjoy hiking through the Rockies, playing golf, or annoying my family with my piano.
             </p>
         </div>
