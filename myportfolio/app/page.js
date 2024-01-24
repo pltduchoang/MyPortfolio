@@ -186,7 +186,7 @@ export default function Page() {
                             style={{zIndex:-1}}
                         />
                     </div>
-                    <div className={`relative section w-full pt-8 px-6 lg:pl-10 lg:pr-14 ${visibleSections['education'] ? 'visible' : ''}`} id='education' >
+                    <div className={`relative section w-full pt-8 px-6 lg:pl-10 lg:pr-14  ${visibleSections['education'] ? 'visible' : ''}`} id='education' >
                         <Education />
                         <Achievements />
                         <div 

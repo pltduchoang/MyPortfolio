@@ -176,15 +176,7 @@ body {
   width: 27%;
 }
 
-.marginTopForSmallScreen {
-  margin-top: windowHeight; /* Replace with the actual value or a CSS variable */
-}
 
-@media screen and (min-width: 1024px) { /* Adjust the breakpoint as needed */
-  .marginTopForSmallScreen {
-    margin-top: 0;
-  }
-}
 
 .destMenuShow {
   scale: 10000%;
@@ -197,3 +189,8 @@ body {
 .hover-parent:hover svg {
   transform: translateX(145px);
 }
+
+.element {
+  width: 100%; /* Default to full width on mobile */
+}
+
