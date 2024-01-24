@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useTheme } from '../utils/ThemeContext';
 
-const sections = ['bio','education','skills', 'projects'];
+const sections = ['bio','education' ,'achievements', 'skills', 'projects'];
 
 export default function Menu() {
     const [activeSection, setActiveSection] = useState('');
