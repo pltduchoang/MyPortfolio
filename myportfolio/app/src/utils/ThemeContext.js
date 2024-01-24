@@ -12,8 +12,8 @@ export function ThemeProvider({ children }) {
   const [visibleSections, setVisibleSections] = useState({});
   const [isFilterVisible, setIsFilterVisible] = useState(false);
   const [isDestinationMenuVisible, setIsDestinationMenuVisible] = useState(false);
-  const [currentDestination, setCurrentDestination] = useState('shirakawa-go');
-  const [destinationName, setDestinationName] = useState('Shirakawa-go, Japan');
+  const [currentDestination, setCurrentDestination] = useState('dolomites');
+  const [destinationName, setDestinationName] = useState('Dolomite Mountains, Italy');
 
   const setSectionVisibility = (section, isVisible) => {
     setVisibleSections(prev => {
