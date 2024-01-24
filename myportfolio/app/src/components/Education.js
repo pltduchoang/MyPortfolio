@@ -8,7 +8,7 @@ export default function Education () {
     const    itemList3 = ['IT infrastructure', 'Agile', 'Project Management', 'DNS', 'DHCP', 'Active Directory','OpenLDAP']
 
     return (
-<div className={`font-normal text-base py-6 ${isNightMode ? 'text-night-light' : 'text-day-light'}`}>
+<main className={`font-normal text-base py-6 ${isNightMode ? 'text-night-light' : 'text-day-light'}`}>
     <h2 className={`font-semibold text-xl my-6 ${isNightMode ? 'text-night' : 'text-day'}`}>EDUCATION</h2>
 
     <div className="education-section">
@@ -64,6 +64,6 @@ export default function Education () {
         
 
     </div>
-</div>
+</main>
     );
 }

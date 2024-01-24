@@ -108,13 +108,13 @@ useEffect(() => {
     , [])
 
     return (
-        <div className=''>
+        <div className='w-screen'>
             
             <img
                 src={loadBackground(currentBackground)}
                 alt="Background"
                 quality={100}
-                className={`transition min-h-screen min-w-full object-cover fixed top-0 left-0 duration-400 ease-out ${isCurrentBackgroundVisible ? 'opacity-100' : 'opacity-0'}`}
+                className={`transition min-h-screen min-w-screen object-cover fixed top-0 left-0 duration-400 ease-out ${isCurrentBackgroundVisible ? 'opacity-100' : 'opacity-0'}`}
                 style={{zIndex: -2}}
             />
             {layerStates.map((layerVisible, index) => (
@@ -122,10 +122,8 @@ useEffect(() => {
                     <img
                         src={loadBackground(isNightMode ? nightImagesIndex[index] : dayImagesIndex[index])}
                         alt={`Layer ${index + 1}`}
-                        layout="fill"
-                        objectfit="cover"
                         quality={100}
-                        className={`transition min-h-screen min-w-full object-cover fixed top-0 left-0 duration-500 ease-in ${layerVisible ? 'opacity-100' : 'opacity-0'}`}
+                        className={`transition min-h-screen min-w-screen object-cover fixed top-0 left-0 duration-500 ease-in ${layerVisible ? 'opacity-100' : 'opacity-0'}`}
                         style={{ zIndex: -3 - index }}
                     />
                 </div>
