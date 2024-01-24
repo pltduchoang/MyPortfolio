@@ -124,7 +124,7 @@ export default function Page() {
             </div>
             <div className={`fixed top-0 left-0 w-full h-full flex justify-center items-center bg-transparent flex-col ${showDestinationList ? '' : 'hidden'}`}
             style={{ zIndex: 1 }}>
-                <h2 className={`text-3xl font-extrabold font-serif -translate-y-10 ${isNightMode? ' text-night' : 'text-day'}`}>Which destination is on your mind?</h2>
+                <h2 className={`text-xl md:text-3xl font-extrabold font-serif -translate-y-10 ${isNightMode? ' text-night' : 'text-day'}`}>Which destination is on your mind?</h2>
                 {destinations.map((destination, index) => (
                     <div key={index} className={`m-2 flex justify-center items-center bg-transparent transition duration-500 ease-in-out hover:scale-105 hover:text-white ${isNightMode? 'text-night' : 'text-day'} ${showDestinationList? 'opacity-100' : 'opacity-0'}`}>
                         <button onClick={() => {

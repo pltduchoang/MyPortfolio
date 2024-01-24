@@ -56,7 +56,7 @@ export default function Projects () {
         </div>
         <div className={`relative project-section my-4 transition-all duration-200 ease-in-out hover:translate-x-1 hover:-translate-y-1 opacity-80 ${isNightMode ? 'bg-stone-700' : 'bg-slate-200'}`}>
             <div className='p-6'>
-                <h3 className={`font-semibold text-base mt-3 ${isNightMode ? 'text-night' : 'text-day'}`}>Grow with Nutrition management webapp - Team project</h3>
+                <h3 className={`font-semibold text-2xl mt-3 ${isNightMode ? 'text-night' : 'text-day'}`}>Grow with Nutrition management webapp - Team project</h3>
                 <p className="text-base font-semibold">Short description of the project. Detailing the purpose and functionality.</p>
                 <ul className="list-disc list-inside">
                     <li className="text-base font-semibold">Manage users</li>
