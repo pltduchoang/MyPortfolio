@@ -76,7 +76,7 @@ export default function Menu() {
             <div ref={menuRef} className={`transition-all w-full duration-700 ease-in-out fixed left-0 element flex justify-between px-6 h-16 ${isNightMode? 'menu-bg-night':'menu-bg-day' }  ${isTop ? '-translate-y-16' : ''} lg:opacity-0 `}>
             
             </div>
-            <div className={`flex flex-row w-screen justify-between p-6 fixed -top-3 transition-all duration-700 ease-in-out ${isNightMode? 'menu-text-night' : 'menu-text-day'} ${isTop ? '' : ''} ${isFilterVisible? '' :'-translate-y-24'} lg:pl-24 lg:pr-16`}>
+            <div className={`flex flex-row w-full justify-between p-6 fixed -top-3 transition-all duration-700 ease-in-out ${isNightMode? 'menu-text-night' : 'menu-text-day'} ${isTop ? '' : ''} ${isFilterVisible? '' :'-translate-y-24'} lg:pl-24 lg:pr-16`}>
                     {isNightMode? 
                     (<button onClick={handleDestination}
                     style={{zIndex:2}}>
