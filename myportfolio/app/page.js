@@ -113,7 +113,7 @@ export default function Page() {
     ];
     
     return (
-        <main className=' max-w-screen-sm overflow-hidden'>
+        <main className=''>
             <div className='fixed top-0 left-0 w-full h-full flex justify-center items-center bg-transparent'
             style={{zIndex:-1}}>
                 <h1 className={`text-5xl font-serif text-white transition-all duration-300 ease-in-out opacity-0 ${flyMessage ? 'opacity-80 translate-x-1 -translate-y-1' : ''}`}>{destinationName}</h1>
