@@ -140,13 +140,13 @@ export default function Projects (){
         transform: `translateY(${firstThumbnailHeight}px)`,
     };
     const pushDownThumbnailStyleTwo = {
-        transform: `translateY(${secondProjectHeight}px)`,
+        transform: `translateY(${secondProjectHeight + 10}px)`,
     };
     const pushDownProjectThree = {
         transform: `translateY(${secondThumbnailHeight}px)`,
     };
     const pushDownThumbnailStyleThree = {
-        transform: `translateY(${thirdProjectHeight}px)`,
+        transform: `translateY(${thirdProjectHeight + 10}px)`,
     };
     const scaleUpStyle = {
         paddingBottom: `${firstThumbnailHeight + 50}px`,
