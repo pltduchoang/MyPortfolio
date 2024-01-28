@@ -47,13 +47,13 @@ export default function Page() {
         setHideContent(true);
         setTimeout(() => {
             setHideContent(false);
-        }, 2000);
+        }, 1500);
         setTimeout(() => {
             setFlyMessage(true);
         }, 300);
         setTimeout(() => {
             setFlyMessage(false);
-        }, 2000);
+        }, 1500);
     }, [currentDestination]);
 
 
