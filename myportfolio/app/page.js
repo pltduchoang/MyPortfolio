@@ -31,7 +31,6 @@ export default function Page() {
     const [flyMessage, setFlyMessage] = useState(false);
     const [showDestinationList, setShowDestinationList] = useState(false);
     const [renderList, setRenderList] = useState(false);
-    const [projectBGScaleUp, setProjectBGScaleUp] = useState(false);
     useEffect(() => {
         setTimeout(() => {
             setHideContent(false);
@@ -113,13 +112,7 @@ export default function Page() {
         { name: 'Yosemite, USA', folder: 'yosemite' },
     ];
     
-    const handleScaleUpProjectBG = (e) => {
-        if (e) {
-            setProjectBGScaleUp(true);
-        } else {
-            setProjectBGScaleUp(false);
-        }
-    };
+
 
 
     return (
@@ -221,7 +214,7 @@ export default function Page() {
                         />
                     </div>
                     <div className={`section w-full pt-8  ${visibleSections['projects'] ? 'visible' : ''}`} id='projects'>
-                        <Projects scaleUp={handleScaleUpProjectBG}/>
+                        <Projects/>
                         <div 
                             className={`transition absolute top-0 left-0 w-full h-full duration-1000 ease-in ${isNightMode ? 'bg-black' : 'bg-white'} ${isFilterVisible ? ' opacity-60' : 'opacity-0'}`}
                             style={{zIndex:-1}}

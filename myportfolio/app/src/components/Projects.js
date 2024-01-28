@@ -2,7 +2,6 @@
 import { useTheme } from '../utils/ThemeContext';
 import { useEffect, useState, useRef } from 'react';
 
-import NGOImage from '../../../public/project/ngo/phone.png';
 
 export default function Projects (){
     const { isNightMode,
@@ -274,7 +273,7 @@ export default function Projects (){
                             </div>
                         </div>
                         <div className='w-4/12 p-4'>
-                            <img className="" src={NGOImage} alt="NGO Management" />
+                            <img className="" src='/project/ngo/phone.png' alt="NGO Management" />
                         </div>
                         
                         
@@ -347,7 +346,7 @@ export default function Projects (){
                             </div>
                         </div>
                         <div className='w-4/12 p-4'>
-                            <img className="" src={NGOImage} alt="NGO Management" />
+                            <img className="" src='/project/ngo/phone.png' alt="NGO Management" />
                         </div>
                         
                         
