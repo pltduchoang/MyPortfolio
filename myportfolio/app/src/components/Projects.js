@@ -212,7 +212,7 @@ export default function Projects (){
                             target="_blank"
                             rel="noopener noreferrer"
                             className='w-4/12 text-center'>
-                            <div className={`px-3 py-2 hover:scale-110 transition duration-200 ease-in-out ${isNightMode? 'tag-night': 'tag-day'}`}>
+                            <div className={`px-3 py-2 hover:scale-100 transition duration-200 ease-in-out ${isNightMode? 'tag-night': 'tag-day'}`}>
                                 Github
                             </div>
                         </a>
@@ -221,7 +221,7 @@ export default function Projects (){
                             target="_blank"
                             rel="noopener noreferrer"
                             className='w-4/12 text-center'>
-                            <div className={`px-3 py-2 hover:scale-110 transition duration-200 ease-in-out ${isNightMode? 'tag-night': 'tag-day'}`}>
+                            <div className={`px-3 py-2 hover:scale-100 transition duration-200 ease-in-out ${isNightMode? 'tag-night': 'tag-day'}`}>
                                 Visit
                             </div>
                         </a>
@@ -294,7 +294,7 @@ export default function Projects (){
                             target="_blank"
                             rel="noopener noreferrer"
                             className='w-4/12 text-center'>
-                            <div className={`px-3 py-2 hover:scale-110 transition duration-200 ease-in-out ${isNightMode? 'tag-night': 'tag-day'}`}>
+                            <div className={`px-3 py-2 hover:scale-100 transition duration-200 ease-in-out ${isNightMode? 'tag-night': 'tag-day'}`}>
                                 Github
                             </div>
                         </a>
@@ -357,7 +357,7 @@ export default function Projects (){
                             target="_blank"
                             rel="noopener noreferrer"
                             className='w-4/12 text-center'>
-                            <div className={`px-3 py-2 hover:scale-110 transition duration-200 ease-in-out ${isNightMode? 'tag-night': 'tag-day'}`}>
+                            <div className={`px-3 py-2 hover:scale-100 transition duration-200 ease-in-out ${isNightMode? 'tag-night': 'tag-day'}`}>
                                 In progress
                             </div>
                         </a>
@@ -366,7 +366,7 @@ export default function Projects (){
                             target="_blank"
                             rel="noopener noreferrer"
                             className='w-4/12 text-center'>
-                            <div className={`px-3 py-2 hover:scale-110 transition duration-200 ease-in-out ${isNightMode? 'tag-night': 'tag-day'}`}>
+                            <div className={`px-3 py-2 hover:scale-100 transition duration-200 ease-in-out ${isNightMode? 'tag-night': 'tag-day'}`}>
                                 In progress
                             </div>
                         </a>

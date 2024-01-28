@@ -34,7 +34,7 @@ export default function Page() {
     useEffect(() => {
         setTimeout(() => {
             setHideContent(false);
-        }, 1000);
+        }, 1300);
         setTimeout(() => {
             setFlyMessage(true);
         }, 200);
