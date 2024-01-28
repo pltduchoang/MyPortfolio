@@ -103,7 +103,7 @@ useEffect(() => {
         setIsFilterVisible(false)
         setTimeout(() => {
             setIsFilterVisible(true)
-        }, 2000);
+        }, 1300);
     }
     , [])
 
