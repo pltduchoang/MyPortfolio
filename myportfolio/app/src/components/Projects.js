@@ -137,13 +137,13 @@ export default function Projects (){
         transform: `translateY(${firstProjectHeight + 10}px)`,
     };
     const pushDownProjectTwo = {
-        transform: `translateY(${firstThumbnailHeight}px)`,
+        transform: `translateY(${firstThumbnailHeight +10}px)`,
     };
     const pushDownThumbnailStyleTwo = {
         transform: `translateY(${secondProjectHeight + 10}px)`,
     };
     const pushDownProjectThree = {
-        transform: `translateY(${secondThumbnailHeight}px)`,
+        transform: `translateY(${secondThumbnailHeight +10}px)`,
     };
     const pushDownThumbnailStyleThree = {
         transform: `translateY(${thirdProjectHeight + 10}px)`,
