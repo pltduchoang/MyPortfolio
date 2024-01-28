@@ -7,7 +7,7 @@ export default function Bio() {
         <div className=''>
             <h2 className={` text-sm font-semibold ${isNightMode ? 'text-night' : 'text-day'} md:text-lg`}>This is your pilot from the flight deck</h2>
             
-            <h1 className={`text-5xl font-bold ${isNightMode ? 'text-night' : 'text-day'} md:text-6xl`}>Duc Hoang</h1>
+            <h1 className={`text-5xl lg:text-4xl xl:text-5xl font-bold ${isNightMode ? 'text-night' : 'text-day'} md:text-6xl`}>Duc Hoang</h1>
 
             {/* <hr className={` w-56 mt-2 ${isNightMode? 'hr-night' : 'hr-day'} md:w-8/12`}/> */}
 

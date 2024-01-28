@@ -29,7 +29,7 @@ export default function Menu() {
             entries.forEach(entry => {
                 setSectionVisibility(entry.target.id, entry.isIntersecting);
             });
-        }, { threshold: 0.3 });
+        }, { threshold: 0.1 });
 
         sections.forEach(section => {
             observer.observe(document.getElementById(section));

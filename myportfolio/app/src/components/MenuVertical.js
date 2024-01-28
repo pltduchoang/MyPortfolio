@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useTheme } from '../utils/ThemeContext';
 
-const sections = ['bio' , 'skills', 'projects'];
+const sections = ['bio' , 'education' , 'skills', 'projects'];
 
 export default function MenuVertical() {
     const [activeSection, setActiveSection] = useState('');

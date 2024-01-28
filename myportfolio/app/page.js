@@ -31,6 +31,7 @@ export default function Page() {
     const [flyMessage, setFlyMessage] = useState(false);
     const [showDestinationList, setShowDestinationList] = useState(false);
     const [renderList, setRenderList] = useState(false);
+    const [projectBGScaleUp, setProjectBGScaleUp] = useState(false);
     useEffect(() => {
         setTimeout(() => {
             setHideContent(false);
@@ -112,6 +113,15 @@ export default function Page() {
         { name: 'Yosemite, USA', folder: 'yosemite' },
     ];
     
+    const handleScaleUpProjectBG = (e) => {
+        if (e) {
+            setProjectBGScaleUp(true);
+        } else {
+            setProjectBGScaleUp(false);
+        }
+    };
+
+
     return (
         <main className=''>
             <div className='fixed top-0 left-0 w-full h-full flex justify-center items-center bg-transparent'
@@ -144,20 +154,22 @@ export default function Page() {
                 <Menu />
             </div>
             <div className={` transition-all duration-500 ease-in-out pt-24 ${hideContent? 'opacity-0' : 'opacity-100'} lg:flex lg:relative lg:justify-end`}>
-                <div id='bio' className={`  section hidden ${visibleSections['bio'] ? 'visible' : ''} lg:w-5/12 xl:w-4/12 lg:flex lg:flex-col lg:fixed lg:top-26 lg:left-16 xl:left-36 lg:pb-10 lg:mt-10`}>
-                    <div className='w-80 pt-8 px-6 md:w-1/2 lg:w-11/12 relative'>
-                        <Bio/>
+                <div className='hidden lg:w-6/12 lg:flex lg:flex-col lg:fixed lg:top-0 lg:left-0 lg:h-screen lg:justify-center lg:items-center'>
+                    <div id='bio' className={`p-10 relative lg:w-9/12 xl:w-7/12`}>
+                        <div className='w-80 md:w-1/2 lg:w-10/12 relative'>
+                            <Bio/>
+                        </div>
+                        <div className='ml-6 my-16' style={{zIndex:2}}>
+                            <MenuVertical />
+                        </div>
+                        <div className='w-80 -translate-x-6'>
+                            <SocialIcons />
+                        </div>
+                        <div 
+                            className={`transition absolute top-0 left-0 w-full h-full duration-1000 ease-in ${isNightMode ? 'bg-black' : 'bg-white'} ${isFilterVisible ? ' opacity-90' : 'opacity-0'}`}
+                            style={{zIndex:-1}}
+                        />
                     </div>
-                    <div className='ml-6 my-14' style={{zIndex:2}}>
-                        <MenuVertical />
-                    </div>
-                    <div className='w-80 pt-8 px-6'>
-                        <SocialIcons />
-                    </div>
-                    <div 
-                        className={`transition absolute top-0 left-0 w-full h-full duration-1000 ease-in ${isNightMode ? 'bg-black' : 'bg-white'} ${isFilterVisible ? ' opacity-90' : 'opacity-0'}`}
-                        style={{zIndex:-1}}
-                    />
                 </div>
                 <div id='bio' className={`absolute top-0 left-0 mb-20 flex flex-col w-full h-screen justify-center items-center ${visibleSections['bio'] ? 'visible' : ''} lg:w-6/12 lg:h-screen lg:hidden`}
 
@@ -177,7 +189,7 @@ export default function Page() {
                     </div>
                 </div>
                 <div className='absolute top-full lg:pl-10 lg:w-6/12 lg:absolute lg:top-0 '>
-                    <div className={`relative section w-full pt-8 px-6 lg:pl-10 lg:pr-14 ${visibleSections['education'] ? 'visible' : ''}`} id='education' >
+                    <div className={`relative section w-full pt-8 px-6 lg:pl-10 lg:pr-14 ${visibleSections['education'] ? 'visible' : ''}`} id='about' >
                         <div className='lg:mt-24'>
                             <About />
                         </div>
@@ -204,14 +216,14 @@ export default function Page() {
                     <div className={` relative section w-full pt-8 px-6 lg:pl-10 lg:pr-14 ${visibleSections['skills'] ? 'visible' : ''}`} id='skills'>
                         <Skills />
                         <div 
-                            className={`transition absolute top-0 left-0 w-full h-full duration-1000 ease-in ${isNightMode ? 'bg-black' : 'bg-white'} ${isFilterVisible ? ' opacity-50' : 'opacity-0'}`}
+                            className={`transition absolute top-0 left-0 w-full h-full duration-1000 ease-in ${isNightMode ? 'bg-black' : 'bg-white'} ${isFilterVisible ? ' opacity-60' : 'opacity-0'}`}
                             style={{zIndex:-1}}
                         />
                     </div>
-                    <div className={`section w-full pt-8 px-6 lg:pl-10 lg:pr-14 ${visibleSections['projects'] ? 'visible' : ''}`} id='projects'>
-                        <Projects />
+                    <div className={`section w-full pt-8  ${visibleSections['projects'] ? 'visible' : ''}`} id='projects'>
+                        <Projects scaleUp={handleScaleUpProjectBG}/>
                         <div 
-                            className={`transition absolute top-0 left-0 w-full h-full duration-1000 ease-in ${isNightMode ? 'bg-black' : 'bg-white'} ${isFilterVisible ? ' opacity-50' : 'opacity-0'}`}
+                            className={`transition absolute top-0 left-0 w-full h-full duration-1000 ease-in ${isNightMode ? 'bg-black' : 'bg-white'} ${isFilterVisible ? ' opacity-60' : 'opacity-0'}`}
                             style={{zIndex:-1}}
                         />
                     </div>
