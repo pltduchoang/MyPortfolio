@@ -215,10 +215,7 @@ export default function Page() {
                     </div>
                     <div className={`section w-full pt-8  ${visibleSections['projects'] ? 'visible' : ''}`} id='projects'>
                         <Projects/>
-                        <div 
-                            className={`transition absolute top-0 left-0 w-full h-full duration-1000 ease-in ${isNightMode ? 'bg-black' : 'bg-white'} ${isFilterVisible ? ' opacity-60' : 'opacity-0'}`}
-                            style={{zIndex:-1}}
-                        />
+                        
                     </div>
                 </div>
             </div>
