@@ -34,13 +34,13 @@ export default function Page() {
     useEffect(() => {
         setTimeout(() => {
             setHideContent(false);
-        }, 2000);
+        }, 1000);
         setTimeout(() => {
             setFlyMessage(true);
-        }, 300);
+        }, 200);
         setTimeout(() => {
             setFlyMessage(false);
-        }, 2000);
+        }, 1000);
     }, []);
 
     useEffect(() => {
