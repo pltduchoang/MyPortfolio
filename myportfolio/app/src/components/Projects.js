@@ -157,7 +157,7 @@ export default function Projects (){
     style={scaleUp? scaleUpStyle :{}}>
         <h2 className={`font-semibold text-xl my-6 ${isNightMode ? 'text-night' : 'text-day'}`}>MY PROJECTS</h2>
 
-        <div className={`relative project-section my-4 transition-all duration-500 ease-in-out hover:opacity-95 opacity-85 `}>
+        <div className={`relative project-section my-4 transition-all duration-500 ease-in-out hover:opacity-100 opacity-90 `}>
             <div className={`px-10 pt-10 relative ${isNightMode ? 'bg-stone-700' : 'bg-slate-200'}`}>
                 <div className={``}
                 style={{zIndex:1}}
@@ -228,7 +228,7 @@ export default function Projects (){
                     </div>
                 </div>
         </div>
-        <div className={`relative project-section my-4 transition-all duration-500 ease-in-out hover:opacity-95 opacity-85 `}
+        <div className={`relative project-section my-4 transition-all duration-500 ease-in-out hover:opacity-100 opacity-90 `}
         style={pushDownTwo? pushDownProjectTwo : {}}>
             <div className={`px-10 pt-10 ${isNightMode ? 'bg-stone-700' : 'bg-slate-200'}`}>
                 <div className={``}
@@ -302,7 +302,7 @@ export default function Projects (){
                     </div>
                 </div>
         </div>
-        <div className={`relative project-section my-4 transition-all duration-500 ease-in-out hover:opacity-95 opacity-85 `}
+        <div className={`relative project-section my-4 transition-all duration-500 ease-in-out hover:opacity-100 opacity-90 `}
         style={pushDownThree ? pushDownProjectThree : {}}>
             <div className={`px-10 pt-10 ${isNightMode ? 'bg-stone-700' : 'bg-slate-200'}`}>
                 <div className={``}
