@@ -191,7 +191,7 @@ export default function Projects (){
                 
             </div>
             <div className={`absolute top-0 left-0px-10 pb-10 ${isNightMode ? 'bg-stone-700' : 'bg-slate-200'} flex flex-col justify-center items-center transition-all duration-500 ease-in-out ${viewDemoOne ? 'opacity-100' : 'opacity-0'}`}
-            style={{ zIndex: -1, ...(viewDemoOne ? pushDownThumbnailStyleOne : {}) }}
+            style={{ zIndex: 0, ...(viewDemoOne ? pushDownThumbnailStyleOne : {}) }}
             ref={firstThumbnailRef}>
                     <div className='w-full'>
                         <div className='flex flex-row justify-around thumbnail'>
@@ -263,7 +263,7 @@ export default function Projects (){
                 </div>
             </div>
             <div className={`absolute top-0 left-0px-10 pb-10 ${isNightMode ? 'bg-stone-700' : 'bg-slate-200'} flex flex-col justify-center items-center transition-all duration-500 ease-in-out ${viewDemoTwo ? ' opacity-100' : 'opacity-0'}`}
-            style={{zIndex:-1, ...(viewDemoTwo ? pushDownThumbnailStyleTwo : {})}}
+            style={{zIndex:0, ...(viewDemoTwo ? pushDownThumbnailStyleTwo : {})}}
             ref={secondThumbnailRef}>
                     <div className='flex flex-row justify-around p-4'>
                         {/* <div className='relative w-3/12 pt-10'>
@@ -337,7 +337,7 @@ export default function Projects (){
                 </div>
             </div>
             <div className={`absolute top-0 left-0px-10 pb-10 ${isNightMode ? 'bg-stone-700' : 'bg-slate-200'} flex flex-col justify-center items-center transition-all duration-500 ease-in-out ${viewDemoThree ? ' opacity-100' : 'opacity-0'}`}
-            style={{zIndex:-1, ...(viewDemoThree ? pushDownThumbnailStyleThree : {})}}
+            style={{zIndex:0, ...(viewDemoThree ? pushDownThumbnailStyleThree : {})}}
             ref={thirdThumbnailRef}>
                     <div className='flex flex-row justify-around thumbnail'>
                         <div className='relative w-8/12 p-4'>
