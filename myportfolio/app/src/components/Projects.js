@@ -157,7 +157,7 @@ export default function Projects (){
     style={scaleUp? scaleUpStyle :{}}>
         <h2 className={`font-semibold text-xl my-6 ${isNightMode ? 'text-night' : 'text-day'}`}>MY PROJECTS</h2>
 
-        <div className={`relative project-section my-4 transition-all duration-500 ease-in-out hover:opacity-85 opacity-65 `}>
+        <div className={`relative project-section my-4 transition-all duration-500 ease-in-out hover:opacity-85 md:opacity-65 opacity-85 `}>
             <div className={`px-10 pt-10 relative ${isNightMode ? 'bg-stone-700' : 'bg-slate-200'}`}>
                 <div className={``}
                 style={{zIndex:1}}
@@ -195,13 +195,13 @@ export default function Projects (){
             ref={firstThumbnailRef}>
                     <div className='w-full'>
                         <div className='flex flex-row justify-around thumbnail'>
-                            <div className='relative w-8/12'>
+                            <div className='relative w-8/12 p-4'>
                                 <img className="" src="/project/laptop.png" alt="NGO Management" />
-                                <div className="laptop-video">
+                                <div className="laptop-video p-3">
                                     <video className="" src="/project/ngo/NGOVideoDemo2.mp4" autoPlay loop muted />
                                 </div>
                             </div>
-                            <div className='w-4/12 p-4'>
+                            <div className='w-4/12 md:pl-8 md:pr-10 md:pt-14 pl-6 pr-8 pt-10'>
                                 <img className="" src='/project/ngo/phone.png' alt="NGO Management" />
                             </div>
                         </div> 
@@ -228,7 +228,7 @@ export default function Projects (){
                     </div>
                 </div>
         </div>
-        <div className={`relative project-section my-4 transition-all duration-500 ease-in-out hover:opacity-85 opacity-65 `}
+        <div className={`relative project-section my-4 transition-all duration-500 ease-in-out hover:opacity-85 md:opacity-65 opacity-85 `}
         style={pushDownTwo? pushDownProjectTwo : {}}>
             <div className={`px-10 pt-10 ${isNightMode ? 'bg-stone-700' : 'bg-slate-200'}`}>
                 <div className={``}
@@ -265,15 +265,24 @@ export default function Projects (){
             <div className={`absolute top-0 left-0px-10 pb-10 ${isNightMode ? 'bg-stone-700' : 'bg-slate-200'} flex flex-col justify-center items-center transition-all duration-500 ease-in-out ${viewDemoTwo ? ' opacity-100' : 'opacity-0'}`}
             style={{zIndex:-1, ...(viewDemoTwo ? pushDownThumbnailStyleTwo : {})}}
             ref={secondThumbnailRef}>
-                    <div className='flex flex-row justify-around'>
-                        <div className='relative w-8/12'>
-                            <img className="" src="/project/laptop.png" alt="NGO Management" />
-                            <div className="laptop-video">
-                                <video className="" src="/project/ngo/NGOVideoDemo2.mp4" autoPlay loop muted />
+                    <div className='flex flex-row justify-around p-4'>
+                        {/* <div className='relative w-3/12 pt-10'>
+                            <img className="" src="/project/phone.png" alt="BillX" />
+                            <div className="phone-video">
+                                <video className="" src="/project/billx/billxVideo.mp4" autoPlay loop muted />
                             </div>
+                        </div> */}
+                        <div className='w-3/12 pt-10'>
+                            <img className="" src='/project/billx/billx1.png' alt="BillX" />
                         </div>
-                        <div className='w-4/12 p-4'>
-                            <img className="" src='/project/ngo/phone.png' alt="NGO Management" />
+                        <div className='w-3/12 pt-10'>
+                            <img className="" src='/project/billx/billx4.png' alt="BillX" />
+                        </div>
+                        <div className='w-3/12 pt-10'>
+                            <img className="" src='/project/billx/billx2.png' alt="BillX" />
+                        </div>
+                        <div className='w-3/12 pt-10'>
+                            <img className="" src='/project/billx/billx3.png' alt="BillX" />
                         </div>
                         
                         
@@ -281,7 +290,7 @@ export default function Projects (){
                     
                     <div className='flex flex-row w-full mt-2 justify-around'>
                         <a 
-                            href='https://github.com/pltduchoang/webdev2project.git'
+                            href='https://github.com/pltduchoang/billXenhanced.git'
                             target="_blank"
                             rel="noopener noreferrer"
                             className='w-4/12 text-center'>
@@ -289,19 +298,11 @@ export default function Projects (){
                                 Github
                             </div>
                         </a>
-                        <a 
-                            href='https://webdev2project.vercel.app/specific-page/manage-users'
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className='w-4/12 text-center'>
-                            <div className={`px-3 py-2 hover:scale-110 transition duration-200 ease-in-out ${isNightMode? 'tag-night': 'tag-day'}`}>
-                                Visit
-                            </div>
-                        </a>
+                        
                     </div>
                 </div>
         </div>
-        <div className={`relative project-section my-4 transition-all duration-500 ease-in-out hover:opacity-85 opacity-65 ${pushDownThree? 'push-down' : ''} `}
+        <div className={`relative project-section my-4 transition-all duration-500 ease-in-out hover:opacity-85 md:opacity-65 opacity-85 `}
         style={pushDownThree ? pushDownProjectThree : {}}>
             <div className={`px-10 pt-10 ${isNightMode ? 'bg-stone-700' : 'bg-slate-200'}`}>
                 <div className={``}
@@ -338,37 +339,35 @@ export default function Projects (){
             <div className={`absolute top-0 left-0px-10 pb-10 ${isNightMode ? 'bg-stone-700' : 'bg-slate-200'} flex flex-col justify-center items-center transition-all duration-500 ease-in-out ${viewDemoThree ? ' opacity-100' : 'opacity-0'}`}
             style={{zIndex:-1, ...(viewDemoThree ? pushDownThumbnailStyleThree : {})}}
             ref={thirdThumbnailRef}>
-                    <div className='flex flex-row justify-around'>
-                        <div className='relative w-8/12'>
+                    <div className='flex flex-row justify-around thumbnail'>
+                        <div className='relative w-8/12 p-4'>
                             <img className="" src="/project/laptop.png" alt="NGO Management" />
-                            <div className="laptop-video">
-                                <video className="" src="/project/ngo/NGOVideoDemo2.mp4" autoPlay loop muted />
+                            <div className="laptop-video p-3">
+                                
                             </div>
                         </div>
-                        <div className='w-4/12 p-4'>
-                            <img className="" src='/project/ngo/phone.png' alt="NGO Management" />
+                        <div className='w-4/12 md:pl-8 md:pr-10 md:pt-14 pl-6 pr-8 pt-10'>
+                            <img className="" src='/project/phone.png' alt="NGO Management" />
                         </div>
-                        
-                        
-                    </div>
+                    </div> 
                     
                     <div className='flex flex-row w-full mt-2 justify-around mb-10'>
                         <a 
-                            href='https://github.com/pltduchoang/webdev2project.git'
+                            href=''
                             target="_blank"
                             rel="noopener noreferrer"
                             className='w-4/12 text-center'>
                             <div className={`px-3 py-2 hover:scale-110 transition duration-200 ease-in-out ${isNightMode? 'tag-night': 'tag-day'}`}>
-                                Github
+                                In progress
                             </div>
                         </a>
                         <a 
-                            href='https://webdev2project.vercel.app/specific-page/manage-users'
+                            href=''
                             target="_blank"
                             rel="noopener noreferrer"
                             className='w-4/12 text-center'>
                             <div className={`px-3 py-2 hover:scale-110 transition duration-200 ease-in-out ${isNightMode? 'tag-night': 'tag-day'}`}>
-                                Visit
+                                In progress
                             </div>
                         </a>
                     </div>

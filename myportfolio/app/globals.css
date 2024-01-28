@@ -201,6 +201,18 @@ body {
   width: 70%;
 }
 
+.phone-video {
+  position: absolute;
+  top: 31%;
+  left: 11%;
+  width: 77%;
+}
+
+@media (min-width: 500px) {
+  .phone-video {
+    top: 28%; /* Half width on tablet */
+  }
+}
 
 .scaleUp {
   padding-bottom: 600px;
