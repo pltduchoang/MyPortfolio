@@ -24,6 +24,9 @@ export default function Projects (){
     const [pushDownThree, setPushDownThree] = useState(false);
 
     const [scaleUp, setScaleUp] = useState(false);
+    const [raiseButtonOne, setRaiseButtonOne] = useState(false);
+    const [raiseButtonTwo, setRaiseButtonTwo] = useState(false);
+    const [raiseButtonThree, setRaiseButtonThree] = useState(false);
 
     const   itemList1 = ['Next.js','TailwindCSS' , 'Firebase', 'OAuth']
     const   itemList2 = ['React', 'React Native', 'Firebase', 'Android']
@@ -39,13 +42,21 @@ export default function Projects (){
                     setViewDemoThree(false);
                     setPushDownTwo(true);
                     setPushDownThree(true);
+                    setRaiseButtonTwo(false);
+                    setRaiseButtonThree(false);
                     setScaleUp(true);
+                    setTimeout(() => {
+                        setRaiseButtonOne(true);
+                    }, 700);
                 }
                 else {
-                    setViewDemoOne(false);
-                    setPushDownTwo(false);
-                    setPushDownThree(false);
-                    setScaleUp(false);
+                    setRaiseButtonOne(false);
+                    setTimeout(() => {
+                        setViewDemoOne(false);
+                        setPushDownTwo(false);
+                        setPushDownThree(false);
+                        setScaleUp(false);
+                    }, 200);
                 }
                 break;
             case 2:
@@ -55,12 +66,22 @@ export default function Projects (){
                     setViewDemoThree(false);
                     setPushDownTwo(false);
                     setPushDownThree(true);
+                    setRaiseButtonOne(false);
+                    setRaiseButtonThree(false);
                     setScaleUp(true);
+                    setTimeout(() => {
+                        setRaiseButtonTwo(true);
+                    }
+                    , 700);
                 }
                 else {
-                    setViewDemoTwo(false);
-                    setPushDownThree(false);
-                    setScaleUp(false);
+                    
+                    setRaiseButtonTwo(false);
+                    setTimeout(() => {
+                        setViewDemoTwo(false);
+                        setPushDownThree(false);
+                        setScaleUp(false);
+                    }, 200);
                 }
                 break;
             case 3:
@@ -70,11 +91,21 @@ export default function Projects (){
                     setViewDemoTwo(false);
                     setPushDownTwo(false);
                     setPushDownThree(false);
+                    setRaiseButtonOne(false);
+                    setRaiseButtonTwo(false);
                     setScaleUp(true);
+                    setTimeout(() => {
+                        setRaiseButtonThree(true);
+                    }
+                    , 700);
                 }
                 else {
-                    setViewDemoThree(false);
-                    setScaleUp(false);
+                    setRaiseButtonThree(false);
+                    setTimeout(() => {  
+                        setViewDemoThree(false);
+                        setScaleUp(false);
+                    }, 200);
+                    
                 }
                 break;
             default:
@@ -134,25 +165,25 @@ export default function Projects (){
       }, []);
 
     const pushDownThumbnailStyleOne = {
-        transform: `translateY(${firstProjectHeight + 10}px)`,
-        zIndex: 1,
+        transform: `translateY(${firstProjectHeight + 15}px)`,
+        zIndex: -1,
     };
     const pushDownProjectTwo = {
-        transform: `translateY(${firstThumbnailHeight +10}px)`,
+        transform: `translateY(${firstThumbnailHeight +15}px)`,
     };
     const pushDownThumbnailStyleTwo = {
-        transform: `translateY(${secondProjectHeight + 10}px)`,
-        zIndex: 1,
+        transform: `translateY(${secondProjectHeight + 15}px)`,
+        zIndex: -1,
     };
     const pushDownProjectThree = {
-        transform: `translateY(${secondThumbnailHeight +10}px)`,
+        transform: `translateY(${secondThumbnailHeight +15}px)`,
     };
     const pushDownThumbnailStyleThree = {
-        transform: `translateY(${thirdProjectHeight + 10}px)`,
-        zIndex: 1,
+        transform: `translateY(${thirdProjectHeight + 15}px)`,
+        zIndex: -1,
     };
     const scaleUpStyle = {
-        paddingBottom: `${firstThumbnailHeight + 50}px`,
+        paddingBottom: `${firstThumbnailHeight + 60}px`,
     };
 
     return(
@@ -163,7 +194,7 @@ export default function Projects (){
         <div className={`relative project-section my-4 transition-all duration-500 ease-in-out hover:opacity-100 opacity-90 `}>
             <div className={`px-10 pt-10 relative ${isNightMode ? 'bg-stone-700' : 'bg-slate-200'}`}>
                 <div className={``}
-                style={{zIndex:1}}
+                style={{zIndex:1,...(viewDemoOne ? {zIndex:2} : {})}}
                 ref={firstProjectRef}>
                     <h3 className={`font-semibold text-2xl my-3 ${isNightMode ? 'text-night' : 'text-day'}`}>NGO Management - Solo Project</h3>
                     <p className="text-base font-semibold">A management system for small and medium non-profit organization</p>
@@ -194,7 +225,7 @@ export default function Projects (){
                 
             </div>
             <div className={`absolute top-0 left-0px-10 pb-10 ${isNightMode ? 'bg-stone-700' : 'bg-slate-200'} flex flex-col justify-center items-center transition-all duration-500 ease-in-out ${viewDemoOne ? 'opacity-100' : 'opacity-0'}`}
-            style={{ zIndex:-1, ...(viewDemoOne ? pushDownThumbnailStyleOne : {}) }}
+            style={{ zIndex:-1, ...(viewDemoOne ? pushDownThumbnailStyleOne : {}), ...(raiseButtonOne ? {zIndex:0} : {}) }}
             ref={firstThumbnailRef}>
                     <div className='w-full'>
                         <div className='flex flex-row justify-around thumbnail'>
@@ -215,7 +246,7 @@ export default function Projects (){
                             target="_blank"
                             rel="noopener noreferrer"
                             className='w-4/12 text-center'>
-                            <div className={`px-3 py-2 hover:scale-100 transition duration-200 ease-in-out ${isNightMode? 'tag-night': 'tag-day'}`}>
+                            <div className={`px-3 py-2 hover:scale-105 transition duration-200 ease-in-out ${isNightMode? 'tag-night': 'tag-day'}`}>
                                 Github
                             </div>
                         </a>
@@ -224,7 +255,7 @@ export default function Projects (){
                             target="_blank"
                             rel="noopener noreferrer"
                             className='w-4/12 text-center'>
-                            <div className={`px-3 py-2 hover:scale-100 transition duration-200 ease-in-out ${isNightMode? 'tag-night': 'tag-day'}`}>
+                            <div className={`px-3 py-2 hover:scale-105 transition duration-200 ease-in-out ${isNightMode? 'tag-night': 'tag-day'}`}>
                                 Visit
                             </div>
                         </a>
@@ -235,7 +266,7 @@ export default function Projects (){
         style={pushDownTwo? pushDownProjectTwo : {}}>
             <div className={`px-10 pt-10 ${isNightMode ? 'bg-stone-700' : 'bg-slate-200'}`}>
                 <div className={``}
-                style={{ zIndex: 1}}
+                style={{ zIndex:1,...(viewDemoTwo ? {zIndex:2} : {})}}
                 ref={secondProjectRef}>
                     <h3 className={`font-semibold text-2xl my-3 ${isNightMode ? 'text-night' : 'text-day'}`}>Expense Tracking Mobile App - BillX - Solo Project</h3>
                     <p className="text-base font-semibold">Tracking everyday's expense, designed for personal and small business, providing a financial insight.</p>
@@ -266,7 +297,7 @@ export default function Projects (){
                 </div>
             </div>
             <div className={`absolute top-0 left-0px-10 pb-10 ${isNightMode ? 'bg-stone-700' : 'bg-slate-200'} flex flex-col justify-center items-center transition-all duration-500 ease-in-out ${viewDemoTwo ? ' opacity-100' : 'opacity-0'}`}
-            style={{zIndex:-1, ...(viewDemoTwo ? pushDownThumbnailStyleTwo : {})}}
+            style={{zIndex:-1, ...(viewDemoTwo ? pushDownThumbnailStyleTwo : {}), ...(raiseButtonTwo ? {zIndex:0} : {})}}
             ref={secondThumbnailRef}>
                     <div className='flex flex-row justify-around p-4'>
                         {/* <div className='relative w-3/12 pt-10'>
@@ -297,7 +328,7 @@ export default function Projects (){
                             target="_blank"
                             rel="noopener noreferrer"
                             className='w-4/12 text-center'>
-                            <div className={`px-3 py-2 hover:scale-100 transition duration-200 ease-in-out ${isNightMode? 'tag-night': 'tag-day'}`}>
+                            <div className={`px-3 py-2 hover:scale-105 transition duration-200 ease-in-out ${isNightMode? 'tag-night': 'tag-day'}`}>
                                 Github
                             </div>
                         </a>
@@ -309,7 +340,7 @@ export default function Projects (){
         style={pushDownThree ? pushDownProjectThree : {}}>
             <div className={`px-10 pt-10 ${isNightMode ? 'bg-stone-700' : 'bg-slate-200'}`}>
                 <div className={``}
-                style={{zIndex:1}}
+                style={{zIndex:1,...(viewDemoThree ? {zIndex:2} : {})}}
                 ref={thirdProjectRef}>
                     <h3 className={`font-semibold text-2xl my-3 ${isNightMode ? 'text-night' : 'text-day'}`}>Grow with Nutrition management webapp - Team project</h3>
                     <p className="text-base font-semibold">Short description of the project. Detailing the purpose and functionality.</p>
@@ -329,7 +360,7 @@ export default function Projects (){
                     {viewDemoThree ? (
                         <div onClick={() => handleToggleDemo(3)}
                         className='hover:cursor-pointer mt-6'>
-                            <p>See less</p>
+                            <p className='pb-10'>See less</p>
                         </div>
                     ) : (
                         <div onClick={() => handleToggleDemo(3)}
@@ -340,7 +371,7 @@ export default function Projects (){
                 </div>
             </div>
             <div className={`absolute top-0 left-0px-10 pb-10 ${isNightMode ? 'bg-stone-700' : 'bg-slate-200'} flex flex-col justify-center items-center transition-all duration-500 ease-in-out ${viewDemoThree ? ' opacity-100' : 'opacity-0'}`}
-            style={{zIndex:-1, ...(viewDemoThree ? pushDownThumbnailStyleThree : {})}}
+            style={{zIndex:-1, ...(viewDemoThree ? pushDownThumbnailStyleThree : {}), ...(raiseButtonThree ? {zIndex:0} : {})}}
             ref={thirdThumbnailRef}>
                     <div className='flex flex-row justify-around thumbnail'>
                         <div className='relative w-8/12 p-4'>
