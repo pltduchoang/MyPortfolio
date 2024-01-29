@@ -182,7 +182,7 @@ export default function Page() {
                     </div>
                 </div>
                 <div className='absolute top-full lg:pl-10 lg:w-6/12 lg:absolute lg:top-0 '>
-                    <div className={`relative section w-full pt-8 px-6 lg:pl-10 lg:pr-14 ${visibleSections['education'] ? 'visible' : ''}`} id='about' >
+                    <div className={`relative section w-full pt-8 px-6 lg:pl-10 lg:pr-14 ${visibleSections['education'] ? 'visible' : ''}`} id='education' >
                         <div className='lg:mt-24'>
                             <About />
                         </div>
@@ -191,7 +191,7 @@ export default function Page() {
                             style={{zIndex:-1}}
                         />
                     </div>
-                    <div className={`relative section w-full pt-8 px-6 lg:pl-10 lg:pr-14  ${visibleSections['education'] ? 'visible' : ''}`} id='education' >
+                    <div className={`relative section w-full pt-8 px-6 lg:pl-10 lg:pr-14  ${visibleSections['education'] ? 'visible' : ''}`} id='' >
                         <Education />
                         <Achievements />
                         <div 
