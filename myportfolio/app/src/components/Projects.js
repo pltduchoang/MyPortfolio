@@ -177,6 +177,7 @@ export default function Projects (){
     };
     const pushDownProjectThree = {
         transform: `translateY(${secondThumbnailHeight +30}px)`,
+        paddingBottom: `40px`,
     };
     const pushDownThumbnailStyleThree = {
         transform: `translateY(${thirdProjectHeight + 15}px)`,
