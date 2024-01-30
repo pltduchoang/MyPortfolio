@@ -172,11 +172,11 @@ export default function Projects (){
         transform: `translateY(${firstThumbnailHeight +15}px)`,
     };
     const pushDownThumbnailStyleTwo = {
-        transform: `translateY(${secondProjectHeight + 15}px)`,
+        transform: `translateY(${secondProjectHeight + 30}px)`,
         zIndex: -1,
     };
     const pushDownProjectThree = {
-        transform: `translateY(${secondThumbnailHeight +15}px)`,
+        transform: `translateY(${secondThumbnailHeight +30}px)`,
     };
     const pushDownThumbnailStyleThree = {
         transform: `translateY(${thirdProjectHeight + 15}px)`,
@@ -196,7 +196,8 @@ export default function Projects (){
                 <div className={``}
                 style={{zIndex:1,...(viewDemoOne ? {zIndex:2} : {})}}
                 ref={firstProjectRef}>
-                    <h3 className={`font-semibold text-2xl my-3 ${isNightMode ? 'text-night' : 'text-day'}`}>NGO Management - Solo Project</h3>
+                    <h3 className={`font-semibold text-2xl mt-3 ${isNightMode ? 'text-night' : 'text-day'}`}>NGO Management</h3>
+                    <h4 className={`font-semibold text-base mb-3 ${isNightMode ? 'text-night' : 'text-day'}`}>Solo - Full stack developer</h4>
                     <p className="text-base font-semibold">A management system for small and medium non-profit organization</p>
                     <ul className="list-disc list-inside my-3">
                         <li className="text-base font-semibold">Manage members, volunteers, and events</li>
@@ -268,13 +269,14 @@ export default function Projects (){
                 <div className={``}
                 style={{ zIndex:1,...(viewDemoTwo ? {zIndex:2} : {})}}
                 ref={secondProjectRef}>
-                    <h3 className={`font-semibold text-2xl my-3 ${isNightMode ? 'text-night' : 'text-day'}`}>Expense Tracking Mobile App - BillX - Solo Project</h3>
+                    <h3 className={`font-semibold text-2xl mt-3 ${isNightMode ? 'text-night' : 'text-day'}`}>Expense Tracking Mobile App - BillX</h3>
+                    <h4 className={`font-semibold text-base mb-3 ${isNightMode ? 'text-night' : 'text-day'}`}>Solo - Full stack developer</h4>
                     <p className="text-base font-semibold">Tracking everyday's expense, designed for personal and small business, providing a financial insight.</p>
                     <ul className="list-disc list-inside my-3">
-                        <li className="text-base font-semibold">Store expense record, provide insight visually with charts</li>
+                        <li className="text-base font-semibold">Expense record, visual insight with charts</li>
                         <li className="text-base font-semibold">Instant sync with online database</li>
-                        <li className="text-base font-semibold">Expense group in categories, accounts, savings, budget</li>
-                        <li className="text-base font-semibold">Store up to 10 years expense to assist tax filing</li>
+                        <li className="text-base font-semibold">Categories, accounts, savings, budget</li>
+                        <li className="text-base font-semibold">10 years expense to assist tax filing, auditing</li>
                     </ul>
                     <div className="flex flex-wrap">
                         {itemList2.map((item) => (

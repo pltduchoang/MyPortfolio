@@ -11,7 +11,7 @@ export default function Bio() {
 
             {/* <hr className={` w-56 mt-2 ${isNightMode? 'hr-night' : 'hr-day'} md:w-8/12`}/> */}
 
-            <p className={` text-base font-semibold mt-6 ${isNightMode ? 'text-night-light' : 'text-day-light'}`}>I will fly you to the potential of web-app, mobile-app and software.</p>
+            <p className={` text-base font-semibold mt-6 ${isNightMode ? 'text-night-light' : 'text-day-light'}`}>Let's skip airports today, I will show you the world's beauty through my website.</p>
         </div>
     );
 }
