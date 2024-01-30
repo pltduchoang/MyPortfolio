@@ -19,8 +19,8 @@ export default function Education () {
                 <p className="text-base md:hidden">2022 - 2024</p>
                 <p className="text-base font-medium">Southern Alberta Institution of Technology (SAIT)</p>
                 <div className="flex flex-wrap">
-                    {itemList1.map((item) => (
-                        <div className={`rounded-full px-1 mr-1 mt-1 opacity-70 ${isNightMode? 'tag-night' : 'tag-day'}`}>
+                    {itemList1.map((item,index) => (
+                        <div key={index} className={`rounded-full px-1 mr-1 mt-1 opacity-70 ${isNightMode? 'tag-night' : 'tag-day'}`}>
                             <p className=" text-base">#{item}</p>
                         </div>
                     ))}
@@ -33,8 +33,8 @@ export default function Education () {
                 <h3 className={`font-semibold text-base ${isNightMode ? 'text-night' : 'text-day'}`}>Google IT Support Professional Certificate</h3>
                 <p className="text-base md:hidden">2022</p>
                 <div className="flex flex-wrap">
-                    {itemList2.map((item) => (
-                        <div className={`rounded-full px-1 mr-1 mt-1 opacity-70 ${isNightMode? 'tag-night' : 'tag-day'}`}>
+                    {itemList2.map((item,index) => (
+                        <div key={index} className={`rounded-full px-1 mr-1 mt-1 opacity-70 ${isNightMode? 'tag-night' : 'tag-day'}`}>
                             <p className=" text-base">#{item}</p>
                         </div>
                     ))}
@@ -48,8 +48,8 @@ export default function Education () {
                 <p className="text-base md:hidden">2022 - 2023</p>
                 <p className="text-base font-medium">NPower Canada</p>
                 <div className="flex flex-wrap">
-                    {itemList3.map((item) => (
-                        <div className={`rounded-full px-1 mr-1 mt-1 opacity-70 ${isNightMode? 'tag-night' : 'tag-day'}`}>
+                    {itemList3.map((item, index) => (
+                        <div key={index} className={`rounded-full px-1 mr-1 mt-1 opacity-70 ${isNightMode? 'tag-night' : 'tag-day'}`}>
                             <p className=" text-base">#{item}</p>
                         </div>
                     ))}

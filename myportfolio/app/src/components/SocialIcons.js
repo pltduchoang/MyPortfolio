@@ -38,8 +38,8 @@ const SocialIcons = () => {
   };
 
   return (
-    <div className="flex justify-evenly relative">
-      {socialLinks.map((link) => (
+    <div className="flex md:pl-6 justify-around relative w-full">
+      {/* {socialLinks.map((link) => (
         <a
           key={link.name}
           href={link.url}
@@ -49,8 +49,14 @@ const SocialIcons = () => {
         >
           {link.svg}
         </a>
-      ))}
-      <div className={` px-3 border-2 flex items-center justify-center text-sm  hover:cursor-pointer hover:scale-105 transition duration-300 ease-in-out ${isNightMode? 'projectButton-night' : 'projectButton-day'}`} onClick={scrollToProjects}>Projects</div>
+      ))} */}
+      <div className={` py-2 w-28 border-2 flex items-center justify-center text-sm  hover:cursor-pointer hover:scale-105 transition duration-200 ease-in-out ${isNightMode? 'projectButton-night' : 'projectButton-day'}`} onClick={scrollToProjects}>Projects</div>
+      <a
+      href='/resume.pdf'
+      target='_blank'
+      rel='noopener noreferrer'>
+        <div className={` py-2 w-28 border-2 flex items-center justify-center text-sm  hover:scale-105 transition duration-300 ease-in-out ${isNightMode? 'projectButton-night' : 'projectButton-day'}`}>Resume</div>
+      </a>
     </div>
   );
 };

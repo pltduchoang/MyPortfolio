@@ -81,7 +81,7 @@ export default function Menu() {
                     (<button onClick={handleDestination}
                     style={{zIndex:2}}>
                         <div className={`relative w-9 h-9 rounded-full flex flex-row justify-center items-center overflow-hidden hover:cursor-pointer ${isNightMode? 'item-night' : 'item-day'}`}>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.00 24.00" fill="#214177"  width='28' height='28' style={{paddingTop:1}} ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" ></g><g id="SVGRepo_iconCarrier"> <path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path> </g></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.00 24.00" fill="#214177"  width='28' height='28' style={{paddingTop:1}} ><g id="SVGRepo_bgCarrier"></g><g id="SVGRepo_tracerCarrier" ></g><g id="SVGRepo_iconCarrier"> <path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path> </g></svg>
                                 
                         </div>
                     </button>
@@ -90,7 +90,7 @@ export default function Menu() {
                     (<button onClick={handleDestination}
                     style={{zIndex:2}}>
                         <div className={` w-9 h-9 rounded-full flex flex-row justify-center items-center relative overflow-hidden hover:cursor-pointer ${isNightMode? 'item-night' : 'item-day'}`}>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.00 24.00" fill="#82A6CB"  width='28' height='28' style={{paddingTop:1}} ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" ></g><g id="SVGRepo_iconCarrier"> <path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path> </g></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.00 24.00" fill="#82A6CB"  width='28' height='28' style={{paddingTop:1}} ><g id="SVGRepo_bgCarrier"></g><g id="SVGRepo_tracerCarrier" ></g><g id="SVGRepo_iconCarrier"> <path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path> </g></svg>
                         </div>
                     </button>)}
                     <div className='flex items-center transition duration-300 ease-in-out lg:-translate-y-20'>

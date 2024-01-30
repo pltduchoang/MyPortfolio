@@ -187,7 +187,7 @@ export default function Projects (){
     };
 
     return(
-    <div className={`font-normal text-base py-2 ${isNightMode ? 'text-night-light' : 'text-day-light'}  px-6 lg:pl-10 lg:pr-14}`}
+    <div className={`font-normal text-base pt-2 pb-40 ${isNightMode ? 'text-night-light' : 'text-day-light'}  px-6 lg:pl-10 lg:pr-14}`}
     style={scaleUp? scaleUpStyle :{}}>
         <h2 className={`font-semibold text-xl my-6 ${isNightMode ? 'text-night' : 'text-day'}`}>MY PROJECTS</h2>
 
@@ -205,8 +205,8 @@ export default function Projects (){
                         <li className="text-base font-semibold">Schedule volunteers</li>
                     </ul>
                     <div className="flex flex-wrap">
-                        {itemList1.map((item) => (
-                            <div className={`rounded-full px-1 mr-1 mt-1 opacity-70 ${isNightMode? 'tag-night' : 'tag-day'}`}>
+                        {itemList1.map((item,index) => (
+                            <div key={index} className={`rounded-full px-1 mr-1 mt-1 opacity-70 ${isNightMode? 'tag-night' : 'tag-day'}`}>
                                 <p className=" text-base">#{item}</p>
                             </div>
                         ))}
@@ -279,8 +279,8 @@ export default function Projects (){
                         <li className="text-base font-semibold">10 years expense to assist tax filing, auditing</li>
                     </ul>
                     <div className="flex flex-wrap">
-                        {itemList2.map((item) => (
-                            <div className={`rounded-full px-1 mr-1 mt-1 opacity-70 ${isNightMode? 'tag-night' : 'tag-day'}`}>
+                        {itemList2.map((item,index) => (
+                            <div key={index} className={`rounded-full px-1 mr-1 mt-1 opacity-70 ${isNightMode? 'tag-night' : 'tag-day'}`}>
                                 <p className=" text-base">#{item}</p>
                             </div>
                         ))}
@@ -353,9 +353,9 @@ export default function Projects (){
                         <li className="text-base font-semibold">Display information and advertising</li>
                     </ul>
                     <div className="flex flex-wrap">
-                        {itemList3.map((item) => (
+                        {itemList3.map((item,index) => (
                             <div className={`rounded-full px-1 mr-1 mt-1 opacity-70 ${isNightMode? 'tag-night' : 'tag-day'}`}>
-                                <p className=" text-base">#{item}</p>
+                                <p key={index} className=" text-base">#{item}</p>
                             </div>
                         ))}
                     </div>
