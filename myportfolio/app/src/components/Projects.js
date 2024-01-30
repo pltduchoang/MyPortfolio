@@ -192,7 +192,7 @@ export default function Projects (){
         <h2 className={`font-semibold text-xl my-6 ${isNightMode ? 'text-night' : 'text-day'}`}>MY PROJECTS</h2>
 
         <div className={`relative project-section my-4 transition-all duration-500 ease-in-out hover:opacity-100 opacity-90 `}>
-            <div className={`px-10 pt-10 relative ${isNightMode ? 'bg-stone-700' : 'bg-slate-200'}`}>
+            <div className={`px-10 pt-10 relative ${isNightMode ? 'bg-stone-900' : 'bg-slate-200'}`}>
                 <div className={``}
                 style={{zIndex:1,...(viewDemoOne ? {zIndex:2} : {})}}
                 ref={firstProjectRef}>
@@ -225,7 +225,7 @@ export default function Projects (){
                 </div>
                 
             </div>
-            <div className={`absolute top-0 left-0px-10 pb-10 ${isNightMode ? 'bg-stone-700' : 'bg-slate-200'} flex flex-col justify-center items-center transition-all duration-500 ease-in-out ${viewDemoOne ? 'opacity-100' : 'opacity-0'}`}
+            <div className={`absolute top-0 left-0px-10 pb-10 ${isNightMode ?' bg-stone-900' : 'bg-slate-200'} flex flex-col justify-center items-center transition-all duration-500 ease-in-out ${viewDemoOne ? 'opacity-100' : 'opacity-0'}`}
             style={{ zIndex:-1, ...(viewDemoOne ? pushDownThumbnailStyleOne : {}), ...(raiseButtonOne ? {zIndex:0} : {}) }}
             ref={firstThumbnailRef}>
                     <div className='w-full'>
@@ -265,7 +265,7 @@ export default function Projects (){
         </div>
         <div className={`relative project-section my-4 transition-all duration-500 ease-in-out hover:opacity-100 opacity-90 `}
         style={pushDownTwo? pushDownProjectTwo : {}}>
-            <div className={`px-10 pt-10 ${isNightMode ? 'bg-stone-700' : 'bg-slate-200'}`}>
+            <div className={`px-10 pt-10 ${isNightMode ?' bg-stone-900' : 'bg-slate-200'}`}>
                 <div className={``}
                 style={{ zIndex:1,...(viewDemoTwo ? {zIndex:2} : {})}}
                 ref={secondProjectRef}>
@@ -298,7 +298,7 @@ export default function Projects (){
                     )}
                 </div>
             </div>
-            <div className={`absolute top-0 left-0px-10 pb-10 ${isNightMode ? 'bg-stone-700' : 'bg-slate-200'} flex flex-col justify-center items-center transition-all duration-500 ease-in-out ${viewDemoTwo ? ' opacity-100' : 'opacity-0'}`}
+            <div className={`absolute top-0 left-0px-10 pb-10 ${isNightMode ?' bg-stone-900' : 'bg-slate-200'} flex flex-col justify-center items-center transition-all duration-500 ease-in-out ${viewDemoTwo ? ' opacity-100' : 'opacity-0'}`}
             style={{zIndex:-1, ...(viewDemoTwo ? pushDownThumbnailStyleTwo : {}), ...(raiseButtonTwo ? {zIndex:0} : {})}}
             ref={secondThumbnailRef}>
                     <div className='flex flex-row justify-around p-4'>
@@ -340,7 +340,7 @@ export default function Projects (){
         </div>
         <div className={`relative project-section my-4 transition-all duration-500 ease-in-out hover:opacity-100 opacity-90 `}
         style={pushDownThree ? pushDownProjectThree : {}}>
-            <div className={`px-10 pt-10 ${isNightMode ? 'bg-stone-700' : 'bg-slate-200'}`}>
+            <div className={`px-10 pt-10 ${isNightMode ?' bg-stone-900' : 'bg-slate-200'}`}>
                 <div className={``}
                 style={{zIndex:1,...(viewDemoThree ? {zIndex:2} : {})}}
                 ref={thirdProjectRef}>
@@ -372,7 +372,7 @@ export default function Projects (){
                     )}
                 </div>
             </div>
-            <div className={`absolute top-0 left-0px-10 pb-10 ${isNightMode ? 'bg-stone-700' : 'bg-slate-200'} flex flex-col justify-center items-center transition-all duration-500 ease-in-out ${viewDemoThree ? ' opacity-100' : 'opacity-0'}`}
+            <div className={`absolute top-0 left-0px-10 pb-10 ${isNightMode ?' bg-stone-900' : 'bg-slate-200'} flex flex-col justify-center items-center transition-all duration-500 ease-in-out ${viewDemoThree ? ' opacity-100' : 'opacity-0'}`}
             style={{zIndex:-1, ...(viewDemoThree ? pushDownThumbnailStyleThree : {}), ...(raiseButtonThree ? {zIndex:0} : {})}}
             ref={thirdThumbnailRef}>
                     <div className='flex flex-row justify-around thumbnail'>
