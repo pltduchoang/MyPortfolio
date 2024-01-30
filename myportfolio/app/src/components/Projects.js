@@ -184,11 +184,11 @@ export default function Projects (){
         zIndex: -1,
     };
     const scaleUpStyle = {
-        paddingBottom: `${firstThumbnailHeight + 60}px`,
+        paddingBottom: `${firstThumbnailHeight + 200}px`,
     };
 
     return(
-    <div className={`font-normal text-base pt-2 pb-40 ${isNightMode ? 'text-night-light' : 'text-day-light'}  px-6 lg:pl-10 lg:pr-14}`}
+    <div className={`font-normal text-base pt-2 pb-64 ${isNightMode ? 'text-night-light' : 'text-day-light'}  px-6 lg:pl-10 lg:pr-14}`}
     style={scaleUp? scaleUpStyle :{}}>
         <h2 className={`font-semibold text-xl my-6 ${isNightMode ? 'text-night' : 'text-day'}`}>MY PROJECTS</h2>
 
