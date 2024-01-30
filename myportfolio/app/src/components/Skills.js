@@ -11,13 +11,13 @@ export default function Skills() {
         { name: 'Next.js', icon: '/png/nextjs.png' },
         { name: 'Bootstrap', icon: '/png/bootstrap.png' },
         { name: 'Tailwind', icon: '/png/tailwindcss.png' },
-        { name: 'C Sharp', icon: '/png/csharp.png' },
+        { name: 'CSharp', icon: '/png/csharp.png' },
         { name: 'DotNet', icon: '/png/dotnet.png' },
         { name: 'ASP.NET', icon: '/png/aspnet.png' },
         { name: 'Java', icon: '/png/java.png' },
         { name: 'Python', icon: '/png/python.png' },
         { name: 'SQL', icon: '/png/sql.png' },
-        { name: 'Firebase', icon: '/png/firebase.png' },
+        // { name: 'Firebase', icon: '/png/firebase.png' },
     ];
 
     return (
