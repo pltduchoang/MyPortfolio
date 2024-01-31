@@ -25,7 +25,7 @@ export default function Skills() {
             <h2 className={`text-2xl font-bold  ${isNightMode ? 'text-night' : 'text-day'}`}>SKILLS</h2>
             <div className="w-full flex flex-wrap justify-center py-6">
                 {skills.map(skill => (
-                    <div key={skill.name} className={`skill-item max-w-28 m-3 flex flex-col justify-center items-center hover:cursor-pointer ${isNightMode ? 'skill-hover-night' : 'skill-hover'}`}>
+                    <div key={skill.name} className={`skill-item max-w-28 m-3 flex flex-col justify-center items-center ${isNightMode ? 'skill-hover-night' : 'skill-hover'}`}>
                         <div className={`skill-icon`}>
                             <img 
                                 src={skill.icon} 
