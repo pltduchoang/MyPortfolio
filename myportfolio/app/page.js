@@ -98,6 +98,17 @@ export default function Page() {
     }, [isDestinationMenuVisible]);
 
 
+    const handleShowBackground = () => {
+        if (!hideContent) {
+            setHideContent(true);
+            setFlyMessage(true);
+        } else {
+            setHideContent(false);
+            setFlyMessage(false);
+        }
+    };
+
+
     const [showContact, setShowContact] = useState(false);
     const [showContactList, setShowContactList] = useState(false);
     const handleShowContact = () => {
@@ -274,10 +285,7 @@ export default function Page() {
             <div className={`flex flex-row w-full justify-between p-6 fixed bottom-3 transition-all duration-700 ease-in-out ${isNightMode? 'menu-text-night' : 'menu-text-day'} ${isFilterVisible? '' :'translate-y-24'} lg:pl-24 lg:pr-16`}>
                 <div className={`p-2 rounded-full flex justify-between items-center opacity-100 transition duration-300 ease-in-out hover:cursor-pointer hover:scale-105 hover:opacity-100 ${isNightMode? 'item-night text-night' : 'item-day text-day'} ${isDestinationMenuVisible? 'hidden' : ''}`}
                 style={(showContactList? {zIndex:3} : {zIndex:2})}
-                onClick={()=>{
-                    setHideContent(!hideContent);
-                    setFlyMessage(!flyMessage);
-                }}
+                onClick={handleShowBackground}
 
                 >
                     <svg fill={`${isNightMode? '#214177' : '#82a6cb'}`} stroke={`${isNightMode? '#214177' : '#82a6cb' }`} strokeWidth='0' width="28" height="28" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 20h18a1 1 0 0 0 .864-1.504l-7-12c-.359-.615-1.369-.613-1.729 0L9.866 12.1l-1.02-1.632A.998.998 0 0 0 8 10h-.001a1 1 0 0 0-.847.47l-5 8A1 1 0 0 0 3 20zM14 8.985 19.259 18h-5.704l-2.486-3.987L14 8.985zm-5.999 3.9L11.197 18H4.805l3.196-5.115zM6 8c1.654 0 3-1.346 3-3S7.654 2 6 2 3 3.346 3 5s1.346 3 3 3zm0-4a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
