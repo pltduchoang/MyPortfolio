@@ -175,6 +175,24 @@ export default function Page() {
     ];
     
 
+    //scroll to bottom
+    const [isBottom, setIsBottom] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+          const isBottom = window.innerHeight + document.documentElement.scrollTop === document.documentElement.offsetHeight;
+          if (isBottom) {
+            // User has scrolled to the bottom of the page
+                setIsBottom(true);
+            } else {
+                setIsBottom(false);
+            }
+        };
+    
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => window.removeEventListener('scroll', handleScroll);
+      }, []);
 
 
     return (
@@ -182,6 +200,7 @@ export default function Page() {
             <div className='fixed top-0 left-0 w-full h-full flex justify-center items-center bg-transparent'
             style={{zIndex:-1}}>
                 <h1 className={`text-5xl font-serif text-white transition-all duration-300 ease-in-out opacity-0 ${flyMessage ? 'opacity-80 translate-x-1 -translate-y-1' : ''}`}>{destinationName}</h1>
+                <h4 className={`absolute bottom-0 text-base font-serif text-white transition-all duration-300 ease-in-out opacity-0 ${flyMessage ? 'opacity-80 translate-x-1 -translate-y-1' : ''}`}>Photos by SONY Alpha Clock</h4>
             </div>
             <div className={`fixed top-3 left-6 lg:left-24 rounded-full transition-all duration-700 ease-in-out bg-slate-700 w-9 h-9 ${isNightMode? 'menu-bg-night' : 'menu-bg-day'}  ${isDestinationMenuVisible? 'destMenuShow' : 'destMenuHidden'}`}
             style={{zIndex:1}}>
@@ -279,10 +298,11 @@ export default function Page() {
                         <Projects/>
                         
                     </div>
+
                 </div>
             </div>
             
-            <div className={`flex flex-row w-full justify-between p-6 fixed bottom-3 transition-all duration-700 ease-in-out ${isNightMode? 'menu-text-night' : 'menu-text-day'} ${isFilterVisible? '' :'translate-y-24'} lg:pl-24 lg:pr-16`}>
+            <div className={`flex flex-row w-full justify-between px-6 fixed bottom-3 transition-all duration-700 ease-in-out ${isNightMode? 'menu-text-night' : 'menu-text-day'} ${isFilterVisible? '' :'translate-y-24'} lg:pl-24 lg:pr-16`}>
                 <div className={`p-2 rounded-full flex justify-between items-center opacity-100 transition duration-300 ease-in-out hover:cursor-pointer hover:scale-105 hover:opacity-100 ${isNightMode? 'item-night text-night' : 'item-day text-day'} ${isDestinationMenuVisible? 'hidden' : ''}`}
                 style={(showContactList? {zIndex:3} : {zIndex:2})}
                 onClick={handleShowBackground}
@@ -296,7 +316,7 @@ export default function Page() {
                 onClick={handleShowContact}
                 >
                     <svg fill={`${isNightMode? '#214177' : '#82a6cb'}`} stroke={`${isNightMode? '#214177' : '#82a6cb' }`} strokeWidth='0.3' width="28" height="28" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z" />
+                        <path fillRule="evenodd" clipRule="evenodd" d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z" />
                     </svg>
                     
                 </div>
@@ -320,6 +340,7 @@ export default function Page() {
                             ))}
                     </div>
                 </div>
+                
             </div>
             
 

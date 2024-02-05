@@ -355,8 +355,8 @@ export default function Projects (){
                     </ul>
                     <div className="flex flex-wrap">
                         {itemList3.map((item,index) => (
-                            <div className={`rounded-full px-1 mr-1 mt-1 opacity-70 ${isNightMode? 'tag-night' : 'tag-day'}`}>
-                                <p key={index} className=" text-base">#{item}</p>
+                            <div key={index} className={`rounded-full px-1 mr-1 mt-1 opacity-70 ${isNightMode? 'tag-night' : 'tag-day'}`}>
+                                <p  className=" text-base">#{item}</p>
                             </div>
                         ))}
                     </div>

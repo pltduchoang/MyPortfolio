@@ -51,12 +51,12 @@ const SocialIcons = () => {
         </a>
       ))} */}
       <div className={` py-2 w-28 border-2 flex items-center justify-center text-sm  hover:cursor-pointer hover:scale-105 transition duration-200 ease-in-out ${isNightMode? 'projectButton-night' : 'projectButton-day'}`} onClick={scrollToProjects}>Projects</div>
-      <a
-      href='/resume.pdf'
-      target='_blank'
-      rel='noopener noreferrer'>
-        <div className={` py-2 w-28 border-2 flex items-center justify-center text-sm  hover:scale-105 transition duration-300 ease-in-out ${isNightMode? 'projectButton-night' : 'projectButton-day'}`}>Resume</div>
-      </a>
+        <a
+        href='/resume.pdf'
+        target='_blank'
+        rel='noopener noreferrer'>
+          <div className={` py-2 w-28 border-2 flex items-center justify-center text-sm  hover:scale-105 transition duration-300 ease-in-out ${isNightMode? 'projectButton-night' : 'projectButton-day'}`}>Resume</div>
+        </a>
     </div>
   );
 };
