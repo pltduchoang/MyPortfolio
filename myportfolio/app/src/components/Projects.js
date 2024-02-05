@@ -188,7 +188,7 @@ export default function Projects (){
     };
 
     return(
-    <div className={`font-normal text-base pt-2 pb-64 ${isNightMode ? 'text-night-light' : 'text-day-light'}  px-6 lg:pl-10 lg:pr-14}`}
+    <div className={`font-normal text-base pt-2 pb-56 ${isNightMode ? 'text-night-light' : 'text-day-light'}  px-6 lg:pl-10 lg:pr-14}`}
     style={scaleUp? scaleUpStyle :{}}>
         <h2 className={`font-semibold text-xl my-6 ${isNightMode ? 'text-night' : 'text-day'}`}>MY PROJECTS</h2>
 
