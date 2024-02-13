@@ -324,7 +324,7 @@ export default function Page() {
                     style={{zIndex:1}}>
                     
                 </div>
-                <div className={`fixed top-0 left-0 w-full h-full flex items-center bg-transparent flex-col ${showContactList ? '' : 'hidden'}`}
+                <div className={`fixed top-0 left-0 w-full h-full flex items-center bg-transparent flex-col pr-4 ${showContactList ? '' : 'hidden'}`}
                     style={{ zIndex: 1 }}>
                         <div className="flex flex-row w-full md:w-8/12 lg:w-6/12 h-full justify-evenly items-center">
                             {socialLinks.map((link) => (
