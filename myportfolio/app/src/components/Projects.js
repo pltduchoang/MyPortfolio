@@ -198,7 +198,7 @@ export default function Projects (){
                 style={{zIndex:1,...(viewDemoOne ? {zIndex:2} : {})}}
                 ref={firstProjectRef}>
                     <h3 className={`font-semibold text-2xl mt-3 ${isNightMode ? 'text-night' : 'text-day'}`}>NGO Management</h3>
-                    <h4 className={`font-semibold text-base mb-3 ${isNightMode ? 'text-night' : 'text-day'}`}>Solo - Full stack developer</h4>
+                    <h4 className={`font-semibold text-base mb-3 ${isNightMode ? 'text-night' : 'text-day'}`}>Full stack developer</h4>
                     <p className="text-base font-semibold">A management system for small and medium non-profit organization</p>
                     <ul className="list-disc list-inside my-3">
                         <li className="text-base font-semibold">Manage members, volunteers, and events</li>
@@ -271,7 +271,7 @@ export default function Projects (){
                 style={{ zIndex:1,...(viewDemoTwo ? {zIndex:2} : {})}}
                 ref={secondProjectRef}>
                     <h3 className={`font-semibold text-2xl mt-3 ${isNightMode ? 'text-night' : 'text-day'}`}>Expense Tracking Mobile App - BillX</h3>
-                    <h4 className={`font-semibold text-base mb-3 ${isNightMode ? 'text-night' : 'text-day'}`}>Solo - Full stack developer</h4>
+                    <h4 className={`font-semibold text-base mb-3 ${isNightMode ? 'text-night' : 'text-day'}`}>Full stack developer</h4>
                     <p className="text-base font-semibold">Tracking everyday's expense, designed for personal and small business, providing a financial insight.</p>
                     <ul className="list-disc list-inside my-3">
                         <li className="text-base font-semibold">Expense record, visual insight with charts</li>
@@ -345,7 +345,8 @@ export default function Projects (){
                 <div className={``}
                 style={{zIndex:1,...(viewDemoThree ? {zIndex:2} : {})}}
                 ref={thirdProjectRef}>
-                    <h3 className={`font-semibold text-2xl my-3 ${isNightMode ? 'text-night' : 'text-day'}`}>Grow within Nutrition CRM system - Web development</h3>
+                    <h3 className={`font-semibold text-2xl my-3 ${isNightMode ? 'text-night' : 'text-day'}`}>Grow Within Nutrition CRM System - Web development</h3>
+                    <h4 className={`font-semibold text-base mb-3 ${isNightMode ? 'text-night' : 'text-day'}`}>Full stack developer</h4>
                     <p className="text-base font-semibold">Management system for Grow within Nutrition. A small business in Calgary.</p>
                     <ul className="list-disc list-inside my-3">
                         <li className="text-base font-semibold">Manage users</li>
