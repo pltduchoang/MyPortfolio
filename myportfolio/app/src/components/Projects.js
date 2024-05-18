@@ -374,10 +374,10 @@ export default function Projects (){
                     )}
                 </div>
             </div>
-            <div className={`absolute top-0 left-0px-10 pb-10 ${isNightMode ?' bg-stone-900' : 'bg-slate-200'} flex flex-col justify-center items-center transition-all duration-500 ease-in-out ${viewDemoThree ? ' opacity-100' : 'opacity-0'}`}
+            <div className={`w-full absolute top-0 left-0px-10 pb-10 ${isNightMode ?' bg-stone-900' : 'bg-slate-200'} flex flex-col justify-center items-center transition-all duration-500 ease-in-out ${viewDemoThree ? ' opacity-100' : 'opacity-0'}`}
             style={{zIndex:-1, ...(viewDemoThree ? pushDownThumbnailStyleThree : {}), ...(raiseButtonThree ? {zIndex:0} : {})}}
             ref={thirdThumbnailRef}>
-                    <div className='flex flex-row justify-around thumbnail'>
+                    {/* <div className='flex flex-row justify-around thumbnail'>
                         <div className='relative w-8/12 p-4'>
                             <img className="" src="/project/laptop.png" alt="NGO Management" />
                             <div className="laptop-video p-3">
@@ -386,6 +386,11 @@ export default function Projects (){
                         </div>
                         <div className='w-4/12 md:pl-8 md:pr-10 md:pt-14 pl-6 pr-8 pt-10'>
                             <img className="" src='/project/phone.png' alt="NGO Management" />
+                        </div>
+                    </div>  */}
+                    <div className='flex flex-row justify-around thumbnail'>
+                        <div className='relative flex justify-center w-full p-4'>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/YJk56avuT9c" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         </div>
                     </div> 
                     
