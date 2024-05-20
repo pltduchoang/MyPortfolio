@@ -133,6 +133,7 @@ export default function Projects (){
 
     const [thirdProjectHeight, setThirdProjectHeight] = useState(0);
     const [thirdThumbnailHeight, setThirdThumbnailHeight] = useState(0);
+    const [thirdThumbnailWidth, setThirdThumbnailWidth] = useState(0);
 
     const updateDivHeights = () => {
         if (firstProjectRef.current) {
@@ -153,7 +154,12 @@ export default function Projects (){
         if (thirdThumbnailRef.current) {
             setThirdThumbnailHeight(thirdThumbnailRef.current.clientHeight);
         }
+        if (thirdThumbnailRef.current) {
+            setThirdThumbnailWidth(thirdThumbnailRef.current.clientWidth);
+        }
     };
+
+
 
     useEffect(() => {
         updateDivHeights();
@@ -185,6 +191,11 @@ export default function Projects (){
     };
     const scaleUpStyle = {
         paddingBottom: `${firstThumbnailHeight + 200}px`,
+    };
+
+    const dynamicWidth = {
+        width: `${thirdThumbnailWidth - 50}px`,
+        height: `${(thirdThumbnailWidth - 50) * 0.5625}px`,
     };
 
     return(
@@ -390,7 +401,7 @@ export default function Projects (){
                     </div>  */}
                     <div className='flex flex-row justify-around thumbnail'>
                         <div className='relative flex justify-center w-full p-4'>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/YJk56avuT9c" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            <iframe style={dynamicWidth} src="https://www.youtube.com/embed/YJk56avuT9c" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         </div>
                     </div> 
                     
