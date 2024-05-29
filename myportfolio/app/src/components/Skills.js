@@ -26,14 +26,14 @@ export default function Skills() {
             <div className="w-full flex flex-wrap justify-center py-6">
                 {skills.map(skill => (
                     <div key={skill.name} className={`skill-item max-w-28 m-3 flex flex-col justify-center items-center ${isNightMode ? 'skill-hover-night' : 'skill-hover'}`}>
-                        <div className={`skill-icon`}>
+                        <div className={`skill-icon flex justify-center`}>
                             <img 
                                 src={skill.icon} 
                                 alt={skill.name} 
                                 className={`w-10/12 h-auto ${isNightMode ? 'filter-night' : 'filter-day'}`}
                             />
                         </div>
-                        <p className={`text-base text-center font-bold skill-text w-1/2 mt-2 ${isNightMode ? 'text-night-light' : 'text-day-light'}`}>{skill.name}</p>
+                        <p className={`text-base text-center font-bold skill-text w-1/2 mt-2 w-full ${isNightMode ? 'text-night-light' : 'text-day-light'}`}>{skill.name}</p>
                     </div>
                 ))}
             </div>

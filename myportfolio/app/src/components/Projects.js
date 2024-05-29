@@ -405,23 +405,23 @@ export default function Projects (){
                         </div>
                     </div> 
                     
-                    <div className='flex flex-row w-full mt-2 justify-around mb-10'>
+                    <div className='flex flex-row w-full mt-2 justify-around'>
                         <a 
-                            href=''
+                            href='https://github.com/pltduchoang/GWNTemporary/tree/main/frontend'
                             target="_blank"
                             rel="noopener noreferrer"
                             className='w-4/12 text-center'>
-                            <div className={`px-3 py-2 hover:scale-100 transition duration-200 ease-in-out ${isNightMode? 'tag-night': 'tag-day'}`}>
-                                In progress
+                            <div className={`px-3 py-2 hover:scale-105 transition duration-200 ease-in-out ${isNightMode? 'tag-night': 'tag-day'}`}>
+                                Github
                             </div>
                         </a>
                         <a 
-                            href=''
+                            href='https://gwn-temporary.vercel.app/'
                             target="_blank"
                             rel="noopener noreferrer"
                             className='w-4/12 text-center'>
-                            <div className={`px-3 py-2 hover:scale-100 transition duration-200 ease-in-out ${isNightMode? 'tag-night': 'tag-day'}`}>
-                                In progress
+                            <div className={`px-3 py-2 hover:scale-105 transition duration-200 ease-in-out ${isNightMode? 'tag-night': 'tag-day'}`}>
+                                Visit
                             </div>
                         </a>
                     </div>
