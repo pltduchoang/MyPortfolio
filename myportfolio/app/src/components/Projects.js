@@ -264,7 +264,7 @@ export default function Projects (){
                             </div>
                         </a>
                         <a 
-                            href='https://webdev2project.vercel.app/specific-page/manage-users'
+                            href='https://webdev2project.vercel.app/'
                             target="_blank"
                             rel="noopener noreferrer"
                             className='w-4/12 text-center'>
