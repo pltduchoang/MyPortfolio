@@ -12,6 +12,7 @@ import Projects from './src/components/Projects';
 import Skills from './src/components/Skills';
 import Menu from './src/components/Menu';
 import MenuVertical from './src/components/MenuVertical';
+import Modal from './src/components/Modal';
 
 export default function Page() {
     const { isNightMode,
@@ -31,6 +32,13 @@ export default function Page() {
     const [flyMessage, setFlyMessage] = useState(false);
     const [showDestinationList, setShowDestinationList] = useState(false);
     const [renderList, setRenderList] = useState(false);
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleToggleModal = () => {
+        setIsModalOpen(!isModalOpen);
+    };
+
     useEffect(() => {
         setTimeout(() => {
             setHideContent(false);
@@ -196,7 +204,7 @@ export default function Page() {
 
 
     return (
-        <main className=''>
+        <main className='w-screen'>
             <div className='fixed top-0 left-0 w-full h-full flex justify-center items-center bg-transparent'
             style={{zIndex:-1}}>
                 <h1 className={`text-5xl font-serif text-white transition-all duration-300 ease-in-out opacity-0 ${flyMessage ? 'opacity-80 translate-x-1 -translate-y-1' : ''}`}>{destinationName}</h1>
@@ -295,7 +303,7 @@ export default function Page() {
                         />
                     </div>
                     <div className={`section w-full pt-8  ${visibleSections['projects'] ? 'visible' : ''}`} id='projects'>
-                        <Projects/>
+                        <Projects handleToggleModal={handleToggleModal}/>
                         
                     </div>
 
@@ -342,8 +350,15 @@ export default function Page() {
                 </div>
                 
             </div>
-            
 
+            <Modal isOpen={isModalOpen} onClose={handleToggleModal}>
+                <div className='hidden md:block'>
+                    <iframe width={800} height={450} src="https://www.youtube.com/embed/YJk56avuT9c" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                </div>
+                <div className='md:hidden'>
+                    <iframe width={350} height={170} src="https://www.youtube.com/embed/YJk56avuT9c" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                </div>
+            </Modal>
         </main>
     );
 }
