@@ -83,7 +83,7 @@ const ProjectShowcase = ({ project, isNightMode, expand, handleExpand, handleMod
                 
             </div>
             <div className={`absolute top-0 left-0px-10 w-full pb-10 ${isNightMode ?' bg-stone-900' : 'bg-slate-200'} flex flex-col justify-center items-center transition-all duration-500 ease-in-out ${project.id === expand ? 'opacity-100' : 'opacity-0'}`}
-            style={{ zIndex: -1, ...(project.id === expand ? pushDownThumbnailStyle : { opacity: 0 }), ...(raiseButton ? { zIndex: 0 } : { })}}
+            style={{ zIndex: -1, ...(project.id === expand ? pushDownThumbnailStyle : { opacity: 0 }), ...(raiseButton ? { zIndex: 0 } : { zIndex: -1})}}
             ref={demoRef}>
                 {children}
             </div>
