@@ -799,7 +799,7 @@ export default function Projects ({handleToggleModal}){
                                     tbuttonrget="_blank"
                                     rel="noopener noreferrer"
                                     className='w-4/12 text-center'
-                                    disabled="true">
+                                    disabled={true}>
                                     <div className={`px-3 py-2 hover:scale-105 transition duration-200 ease-in-out ${isNightMode? 'tag-night': 'tag-day'}`}>
                                         In Progress
                                     </div>
