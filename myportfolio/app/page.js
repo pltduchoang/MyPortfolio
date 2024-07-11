@@ -301,7 +301,12 @@ export default function Page() {
         doneTransition={handleDoneTransition}
         beginTransition={handleBeginTransition}
       />
-      <div className="" style={{ zIndex: 2 }}>
+      <div
+        className={`${
+          hideContent ? "scale-0" : ""
+        } transition-all duration-300 ease-in-out`}
+        style={{ zIndex: 2 }}
+      >
         <Menu />
       </div>
       <div
@@ -421,7 +426,9 @@ export default function Page() {
         <div
           className={`p-2 rounded-full flex justify-between items-center opacity-100 transition duration-300 ease-in-out hover:cursor-pointer hover:scale-105 hover:opacity-100 ${
             isNightMode ? "item-night text-night" : "item-day text-day"
-          } ${isDestinationMenuVisible ? "hidden" : ""}`}
+          } ${isDestinationMenuVisible ? "hidden" : ""} ${
+            showContactList ? " scale-0" : ""
+          }`}
           style={showContactList ? { zIndex: 3 } : { zIndex: 2 }}
           onClick={handleShowBackground}
         >
@@ -441,7 +448,9 @@ export default function Page() {
         <div
           className={` p-2 rounded-full flex justify-between items-center opacity-100 transition duration-300 ease-in-out hover:cursor-pointer hover:scale-105 hover:opacity-100 ${
             isNightMode ? "item-night text-night" : "item-day text-day"
-          } ${isDestinationMenuVisible ? "hidden" : ""}`}
+          } ${isDestinationMenuVisible ? "hidden" : ""} ${
+            hideContent ? "scale-0" : ""
+          }`}
           style={showContactList ? { zIndex: 3 } : { zIndex: 2 }}
           onClick={handleShowContact}
         >
